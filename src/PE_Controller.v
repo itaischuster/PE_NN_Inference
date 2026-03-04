@@ -69,30 +69,38 @@ end
 assign pe_ready = (rst == 1'b1) && (state == IDLE);
 
 // Instruction Decoding & Routing
-always @(*) begin
+always @(posedge clk or negedge rst) begin
     // Default assignments
-    mac_cmd = NOP;
-    quantize_en = 1'b0;
-    activation_en = 1'b0;
+    if (!rst) begin 
+        mac_cmd <= NOP;
+        quantize_en <= 1'b0;
+        activation_en <= 1'b0;
+    end
+    else begin
+        quantize_en <= 1'b0;
+        activation_en <= 1'b0;
+         // Only decode and route new instructions if the controller is ready
+        if (state == IDLE) begin
+            mac_cmd <= NOP;
+            case (pe_opcode)
+                // Math operations: Route directly to the ALU
+                RST_ACC, MAC4, MAC8, ADD_BIAS, MULT32: begin
+                    mac_cmd <= pe_opcode;
+                end
+                
+                // Requantize: Intercept and pulse quantize_en
+                SHIFT_RIGHT: begin
+                    quantize_en <= 1'b1;
+                end
+                
+                // Activation: Intercept and pulse activation_en
+                APPLY_ACT: begin
+                    activation_en <= 1'b1;
+                end
 
-    // Only decode and route new instructions if the controller is ready
-    if ((state == IDLE) && (rst == 1'b1)) begin
-        case (pe_opcode)
-            // Math operations: Route directly to the ALU
-            RST_ACC, MAC4, MAC8, ADD_BIAS, MULT32: begin
-                mac_cmd = pe_opcode;
-            end
-                
-            // Requantize: Intercept and pulse quantize_en
-            SHIFT_RIGHT: begin
-                quantize_en = 1'b1;
-            end
-                
-            // Activation: Intercept and pulse activation_en
-            APPLY_ACT: begin
-                activation_en = 1'b1;
-            end
-        endcase
+                default: mac_cmd <= NOP;
+            endcase
+        end
     end
 end
 
