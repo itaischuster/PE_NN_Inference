@@ -76,7 +76,7 @@ always @(*) begin
     activation_en = 1'b0;
 
     // Only decode and route new instructions if the controller is ready
-    if ((state == IDLE) && (rst == 1'b1))begin
+    if ((state == IDLE) && (rst == 1'b1)) begin
         case (pe_opcode)
             // Math operations: Route directly to the ALU
             RST_ACC, MAC4, MAC8, ADD_BIAS, MULT32: begin
@@ -104,5 +104,6 @@ always @(posedge clk or negedge rst) begin
         output_valid <= activation_en;
     end
 end
+
 
 endmodule
