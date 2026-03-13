@@ -2,7 +2,7 @@
 
 module Requantizer (
     input wire clk,
-    input wire rst,
+    input wire rst_n,
     input wire quantize_en,
     input wire signed [63:0] acc,
     input wire [5:0] shamt,
@@ -41,12 +41,13 @@ module Requantizer (
             (underflow_after_round) ? -8'sd128 : final_scaled_10bit[7:0];
 
     // Output Register
-    always @(posedge clk or negedge rst) begin
-        if (!rst) begin
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
             activation_in <= 8'b0;
         end else if (quantize_en) begin
             activation_in <= final_clamped_val;
         end
     end
+
 
 endmodule
