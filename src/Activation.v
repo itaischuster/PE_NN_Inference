@@ -10,8 +10,7 @@ module Activation (
     input wire activation_en,
     input wire signed [7:0] activation_in,
  
-    output reg signed [7:0] data_out,
-    output reg valid_out
+    output reg signed [7:0] data_out
 );
  
     // Function Selection Codes
@@ -1156,16 +1155,14 @@ module Activation (
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n)
             data_out <= 8'sd0;
-            valid_out <= 1'b0;
         else begin
-            valid_out <= 1'b0;
             if (activation_en) begin
                 data_out <= mux_out;
-                valid_out <= 1'b1;
             end
         end   
     end
 
 
 endmodule
+
 
