@@ -70,7 +70,7 @@ module ALU(
                           .mult8out(mult_8_3), .bottom_mult4out(mult_4_3_bottom), .top_mult4out(mult_4_3_top));
 
     // Operand Isolation Logic: Enable the adder tree only during a 32x32 multiplication sequence
-    wire op_iso_en = (mac_cmd == MULT32) || busy;
+    wire op_iso_en = (alu_cmd == MULT32) || busy;
 
     wire [15:0] iso_mult_8_0 = op_iso_en ? mult_8_0 : 16'b0;
     wire [15:0] iso_mult_8_1 = op_iso_en ? mult_8_1 : 16'b0;
