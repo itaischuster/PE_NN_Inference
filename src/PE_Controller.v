@@ -10,7 +10,7 @@ module PE_Controller (
     input wire alu_done,
 
     // Datapath Control Signals
-    output reg [4:0] mac_cmd,
+    output reg [4:0] alu_cmd,
     output reg quantize_en,
     output reg activation_en,
 
@@ -58,7 +58,7 @@ always @(*) begin
             
         WAIT_MAC: begin
             // Wait here until the MAC pulses the done flag
-            if (mac_done) begin
+            if (alu_done) begin
                 next_state = IDLE;
             end
         end
@@ -66,7 +66,7 @@ always @(*) begin
 end
 
 // Output pe_ready logic: PE is ready only if FSM is IDLE and reset is NOT active
-assign pe_ready = (rst == 1'b1) && (state == IDLE);
+    assign pe_ready = (rst_n == 1'b1) && (state == IDLE);
 
 // Instruction Decoding & Routing
 always @(posedge clk or negedge rst_n) begin
@@ -115,4 +115,5 @@ end
 
 
 endmodule
+
 
