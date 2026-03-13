@@ -6,8 +6,8 @@ module PE_Controller (
     input wire [4:0] pe_opcode,
     
     // MAC Status Interface
-    input wire mac_busy,
-    input wire mac_done,
+    input wire alu_busy,
+    input wire alu_done,
 
     // Datapath Control Signals
     output reg [4:0] mac_cmd,
@@ -72,20 +72,20 @@ assign pe_ready = (rst == 1'b1) && (state == IDLE);
 always @(posedge clk or negedge rst_n) begin
     // Default assignments
     if (!rst_n) begin 
-        mac_cmd <= NOP;
+        alu_cmd <= NOP;
         quantize_en <= 1'b0;
         activation_en <= 1'b0;
     end
     else begin
         quantize_en <= 1'b0;
         activation_en <= 1'b0;
+        alu_cmd <= NOP;
          // Only decode and route new instructions if the controller is ready
         if (state == IDLE) begin
-            mac_cmd <= NOP;
             case (pe_opcode)
                 // Math operations: Route directly to the ALU
                 RST_ACC, MAC4, MAC8, ADD_BIAS, MULT32: begin
-                    mac_cmd <= pe_opcode;
+                    alu_cmd <= pe_opcode;
                 end
                 
                 // Requantize: Intercept and pulse quantize_en
@@ -98,7 +98,7 @@ always @(posedge clk or negedge rst_n) begin
                     activation_en <= 1'b1;
                 end
 
-                default: mac_cmd <= NOP;
+                default: alu_cmd <= NOP;
             endcase
         end
     end
@@ -115,3 +115,4 @@ end
 
 
 endmodule
+
