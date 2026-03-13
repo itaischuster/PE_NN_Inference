@@ -2,7 +2,7 @@
 
 module PE_Controller (
     input wire clk,
-    input wire rst,
+    input wire rst_n,
     input wire [4:0] pe_opcode,
     
     // MAC Status Interface
@@ -35,8 +35,8 @@ localparam WAIT_MAC = 1'b1;
 reg state, next_state;
 
 // FSM State Register
-always @(posedge clk or negedge rst) begin
-    if (!rst) begin
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
         state <= IDLE;
     end else begin
         state <= next_state;
@@ -69,9 +69,9 @@ end
 assign pe_ready = (rst == 1'b1) && (state == IDLE);
 
 // Instruction Decoding & Routing
-always @(posedge clk or negedge rst) begin
+always @(posedge clk or negedge rst_n) begin
     // Default assignments
-    if (!rst) begin 
+    if (!rst_n) begin 
         mac_cmd <= NOP;
         quantize_en <= 1'b0;
         activation_en <= 1'b0;
@@ -105,12 +105,13 @@ always @(posedge clk or negedge rst) begin
 end
 
 // Output Valid Timing: Goes high one cycle after APPLY_ACT is issued
-always @(posedge clk or negedge rst) begin
-    if (!rst) begin
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
         output_valid <= 1'b0;
     end else begin
         output_valid <= activation_en;
     end
 end
+
 
 endmodule
