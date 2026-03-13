@@ -1156,6 +1156,7 @@ module Activation (
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n)
             data_out <= 8'sd0;
+            valid_out <= 1'b0;
         else begin
             valid_out <= 1'b0;
             if (activation_en) begin
@@ -1167,3 +1168,4 @@ module Activation (
 
 
 endmodule
+
