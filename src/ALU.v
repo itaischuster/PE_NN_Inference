@@ -3,7 +3,7 @@
 module ALU(
     input wire clk,
     input wire [4:0] alu_cmd,
-    input wire rst,
+    input wire rst_n,
     input wire [31:0] op_A,
     input wire [31:0] op_B,
     
@@ -103,8 +103,8 @@ module ALU(
     end
 
     // Main Accumulator & State Control
-    always @(posedge clk or negedge rst) begin
-        if (!rst) begin
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
             cycle_counter <= 2'b00;
             busy <= 1'b0;
             done <= 1'b0;
