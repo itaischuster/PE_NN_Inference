@@ -6,8 +6,8 @@ module PE_Controller_tb;
     logic clk;
     logic rst_n;
     logic [4:0] pe_opcode;
-    logic mac_busy;
-    logic mac_done;
+    logic alu_busy;
+    logic alu_done;
     
     logic [4:0] mac_cmd;
     logic quantize_en;
@@ -34,9 +34,9 @@ module PE_Controller_tb;
         .clk(clk),
         .rst_n(rst_n),
         .pe_opcode(pe_opcode),
-        .mac_busy(mac_busy),
-        .mac_done(mac_done),
-        .mac_cmd(mac_cmd),
+        .alu_busy(alu_busy),
+        .alu_done(alu_done),
+        .alu_cmd(alu_cmd),
         .quantize_en(quantize_en),
         .activation_en(activation_en),
         .pe_ready(pe_ready),
@@ -58,7 +58,7 @@ module PE_Controller_tb;
         input logic exp_ready, 
         input logic exp_out_val
     );
-        if (mac_cmd === exp_cmd && 
+        if (alu_cmd === exp_cmd && 
             quantize_en === exp_q_en && 
             activation_en === exp_a_en && 
             pe_ready === exp_ready && 
@@ -70,7 +70,7 @@ module PE_Controller_tb;
             $display("       Expected: cmd=%0d, q_en=%0b, a_en=%0b, rdy=%0b, out_val=%0b", 
                      exp_cmd, exp_q_en, exp_a_en, exp_ready, exp_out_val);
             $display("       Got:      cmd=%0d, q_en=%0b, a_en=%0b, rdy=%0b, out_val=%0b", 
-                     mac_cmd, quantize_en, activation_en, pe_ready, output_valid);
+                     alu_cmd, quantize_en, activation_en, pe_ready, output_valid);
             fail_count++;
         end
     endtask
@@ -83,8 +83,8 @@ module PE_Controller_tb;
         // Initialization
         rst_n = 1'b1; // Start HIGH to create a true falling edge
         pe_opcode = NOP;
-        mac_busy = 1'b0;
-        mac_done = 1'b0;
+        alu_busy = 1'b0;
+        alu_done = 1'b0;
         #1; 
         rst = 1'b0; // Slam it LOW to explicitly trigger negedge rst
         
@@ -133,9 +133,9 @@ module PE_Controller_tb;
         #1;
         check_state("Test 4b: Stalled FSM ignores new opcodes", NOP, 0, 0, 0, 0); 
         
-        mac_done = 1'b1; // Simulate the MAC finishing
+        alu_done = 1'b1; // Simulate the MAC finishing
         @(posedge clk); #1; // FSM should jump back to IDLE
-        mac_done = 1'b0;
+        alu_done = 1'b0;
         pe_opcode = NOP; #1;
         check_state("Test 4c: FSM Recovers to IDLE", NOP, 0, 0, 1, 0);
 
@@ -156,11 +156,11 @@ module PE_Controller_tb;
         pe_opcode = NOP; #1;
 
         // TEST 7: Rogue MAC Status Flags (Noise Immunity)
-        mac_done = 1'b1; 
-        mac_busy = 1'b1; #1;
+        alu_done = 1'b1; 
+        alu_busy = 1'b1; #1;
         check_state("Test 7: Ignored Rogue Flags in IDLE", NOP, 0, 0, 1, 0);
-        mac_done = 1'b0; 
-        mac_busy = 1'b0; #1;
+        alu_done = 1'b0; 
+        alu_busy = 1'b0; #1;
 
         // TEST 8: Maximum Throughput Pipeline (Back-to-Back Execution)
         pe_opcode = MAC8; #1;
@@ -185,14 +185,14 @@ module PE_Controller_tb;
 
         // TEST 9: The 1-Cycle Fake-Out (Instant Recovery)
         pe_opcode = MULT32; 
-        mac_done = 1'b1; // Assert done immediately to simulate a fast finish or stuck flag
+        alu_done = 1'b1; // Assert done immediately to simulate a fast finish or stuck flag
         @(posedge clk); #1; // FSM jumps to WAIT_MAC and sees mac_done instantly
         
         pe_opcode = NOP; // Clear instruction bus
         check_state("Test 9a: Instant Stall & See Flag", NOP, 0, 0, 0, 0);
         
         @(posedge clk); #1; // FSM should bounce right back to IDLE on this edge
-        mac_done = 1'b0; // Clear the rogue flag
+        alu_done = 1'b0; // Clear the rogue flag
         check_state("Test 9b: Instant Recovery to IDLE", NOP, 0, 0, 1, 0);
 
         // 5. Finish and Log Results
@@ -204,3 +204,4 @@ module PE_Controller_tb;
     end
 
 endmodule
+
