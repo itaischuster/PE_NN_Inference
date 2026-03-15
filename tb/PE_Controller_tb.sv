@@ -9,7 +9,7 @@ module PE_Controller_tb;
     logic alu_busy;
     logic alu_done;
     
-    logic [4:0] mac_cmd;
+    logic [4:0] alu_cmd;
     logic quantize_en;
     logic activation_en;
     logic pe_ready;
@@ -204,4 +204,5 @@ module PE_Controller_tb;
     end
 
 endmodule
+
 
