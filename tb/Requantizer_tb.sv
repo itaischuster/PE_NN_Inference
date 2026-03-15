@@ -4,7 +4,7 @@ module Requantizer_tb;
 
     // 1. Signals matching the Requantizer interface
     logic clk;
-    logic rst;
+    logic rst_n;
     logic quantize_en;
     logic signed [63:0] acc;
     logic [5:0] shamt;
@@ -168,4 +168,5 @@ module Requantizer_tb;
         $display("Total Fails:  %0d", fail_count);
         $finish;
     end
+
 endmodule
