@@ -38,7 +38,7 @@ module Requantizer_random_tb;
     endfunction
 
     initial begin
-        rst = 0; quantize_en = 1; #20 rst = 1;
+        rst_n = 0; quantize_en = 1; #20 rst_n = 1;
 
         $display("Starting 1000 Random Requantization Tests...");
         
@@ -70,3 +70,4 @@ module Requantizer_random_tb;
     end
 
 endmodule
+
