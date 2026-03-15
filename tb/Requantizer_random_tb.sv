@@ -2,7 +2,7 @@
 
 module Requantizer_random_tb;
 
-    logic clk, rst, quantize_en;
+    logic clk, rst_n, quantize_en;
     logic [63:0] acc;
     logic [5:0] shamt;
     logic signed [7:0] activation_in;
@@ -68,4 +68,5 @@ module Requantizer_random_tb;
         $display("Random Testing Complete! Passes: %0d, Fails: %0d", pass_count, fail_count);
         $finish;
     end
+
 endmodule
