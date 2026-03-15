@@ -86,7 +86,7 @@ module PE_Controller_tb;
         alu_busy = 1'b0;
         alu_done = 1'b0;
         #1; 
-        rst = 1'b0; // Slam it LOW to explicitly trigger negedge rst
+        rst_n = 1'b0; // Slam it LOW to explicitly trigger negedge rst
         
         // Let reset settle over a clock edge
         @(posedge clk);
@@ -204,5 +204,6 @@ module PE_Controller_tb;
     end
 
 endmodule
+
 
 
