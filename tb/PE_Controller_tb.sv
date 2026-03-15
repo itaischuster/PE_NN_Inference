@@ -4,7 +4,7 @@ module PE_Controller_tb;
 
     // 1. Signals matching the PE_Controller interface
     logic clk;
-    logic rst;
+    logic rst_n;
     logic [4:0] pe_opcode;
     logic mac_busy;
     logic mac_done;
@@ -32,7 +32,7 @@ module PE_Controller_tb;
     // 2. Instantiate the Design Under Test (DUT)
     PE_Controller uut (
         .clk(clk),
-        .rst(rst),
+        .rst_n(rst_n),
         .pe_opcode(pe_opcode),
         .mac_busy(mac_busy),
         .mac_done(mac_done),
@@ -81,7 +81,7 @@ module PE_Controller_tb;
         $display("----------------------------------------");
 
         // Initialization
-        rst = 1'b1; // Start HIGH to create a true falling edge
+        rst_n = 1'b1; // Start HIGH to create a true falling edge
         pe_opcode = NOP;
         mac_busy = 1'b0;
         mac_done = 1'b0;
@@ -96,7 +96,7 @@ module PE_Controller_tb;
         // During reset, the module is NOT ready
         check_state("Test 1a: Async Reset State (During Reset)", NOP, 0, 0, 0, 0); 
         
-        rst = 1'b1; #1; // Release reset
+        rst_n = 1'b1; #1; // Release reset
         // Now it should be awake and ready
         check_state("Test 1b: Post-Reset Recovery", NOP, 0, 0, 1, 0);
 
@@ -143,11 +143,11 @@ module PE_Controller_tb;
         pe_opcode = MULT32;
         @(posedge clk); #1; // FSM jumps to WAIT_MAC, pe_ready drops
         
-        rst = 1'b0; #1; // Asynchronous violent reset
+        rst_n = 1'b0; #1; // Asynchronous violent reset
         check_state("Test 5a: Async Reset Mid-Stall (During)", NOP, 0, 0, 0, 0); 
 
         pe_opcode = NOP; // Clear the instruction bus before waking up!
-        rst = 1'b1; #1; // Release reset
+        rst_n = 1'b1; #1; // Release reset
         check_state("Test 5b: Mid-Stall Reset Recovery", NOP, 0, 0, 1, 0);
 
         // TEST 6: The Do No Harm Test (Reserved Opcodes)
@@ -202,4 +202,5 @@ module PE_Controller_tb;
         $display("Total Fails:  %0d", fail_count);
         $finish;
     end
+
 endmodule
