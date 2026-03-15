@@ -84,9 +84,10 @@ module PE_Controller_random_tb;
                 // Stalled state
                 expected_q_en <= 1'b0;
                 expected_a_en <= 1'b0;
+                expected_mac_cmd <= 5'b00000;
                 // expected_mac_cmd holds its value from the previous cycle (memory behavior)
 
-                if (mac_done) begin
+                if (alu_done) begin
                     expected_state <= 1'b0; // IDLE
                 end
             end
@@ -124,14 +125,14 @@ module PE_Controller_random_tb;
         $display("Starting PE_Controller Constrained Random Test...");
         
         // Initialize
-        rst = 1'b1;
+        rst_n = 1'b1;
         pe_opcode = 5'b00000;
-        mac_busy = 1'b0;
-        mac_done = 1'b0;
+        alu_busy = 1'b0;
+        alu_done = 1'b0;
         
-        #1; rst = 1'b0; 
+        #1; rst_n = 1'b0; 
         @(posedge clk); #1; 
-        rst = 1'b1;
+        rst_n = 1'b1;
 
         // Run 10,000 chaotic cycles
         for (int i = 0; i < loop_count; i++) begin
@@ -139,16 +140,16 @@ module PE_Controller_random_tb;
             
             // 3% chance to trigger a violent reset mid-operation
             if ($urandom_range(0, 100) < 3) begin
-                rst = 1'b0;
+                rst_n = 1'b0;
                 pe_opcode = 5'b00000;
             end else begin
-                rst = 1'b1;
+                rst_n = 1'b1;
                 // Randomize a 5-bit opcode
                 pe_opcode = $urandom_range(0, 31);
                 
-                mac_busy = $urandom_range(0, 1);
+                alu_busy = $urandom_range(0, 1);
                 // Heavy bias toward 0 for mac_done to allow multi-cycle stalls
-                mac_done = ($urandom_range(0, 10) > 8) ? 1'b1 : 1'b0; 
+                alu_done = ($urandom_range(0, 10) > 8) ? 1'b1 : 1'b0; 
             end
         end
 
@@ -162,3 +163,4 @@ module PE_Controller_random_tb;
     end
 
 endmodule
+
