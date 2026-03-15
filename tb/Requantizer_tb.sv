@@ -18,7 +18,7 @@ module Requantizer_tb;
     // 2. Instantiate the Design Under Test (DUT)
     Requantizer uut (
         .clk(clk),
-        .rst(rst),
+        .rst_n(rst_n),
         .quantize_en(quantize_en),
         .acc(acc),
         .shamt(shamt),
@@ -50,13 +50,13 @@ module Requantizer_tb;
         $display("----------------------------------------");
 
         // Initialization
-        rst = 1'b0;
+        rst_n = 1'b0;
         quantize_en = 1'b0;
         acc = 64'sd0;
         shamt = 6'd0;
         @(posedge clk);
         @(posedge clk);
-        rst = 1'b1;
+        rst_n = 1'b1;
         #1;
 
         // TEST 1: Output Isolation & Clock Enable
@@ -170,3 +170,4 @@ module Requantizer_tb;
     end
 
 endmodule
+
