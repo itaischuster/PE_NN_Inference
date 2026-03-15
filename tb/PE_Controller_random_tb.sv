@@ -4,12 +4,12 @@ module PE_Controller_random_tb;
 
     // Signals
     logic clk;
-    logic rst;
+    logic rst_n;
     logic [4:0] pe_opcode;
-    logic mac_busy;
-    logic mac_done;
+    logic alu_busy;
+    logic alu_done;
     
-    logic [4:0] mac_cmd;
+    logic [4:0] alu_cmd;
     logic quantize_en;
     logic activation_en;
     logic pe_ready;
@@ -18,11 +18,11 @@ module PE_Controller_random_tb;
     // DUT
     PE_Controller uut (
         .clk(clk),
-        .rst(rst),
+        .rst_n(rst_n),
         .pe_opcode(pe_opcode),
-        .mac_busy(mac_busy),
-        .mac_done(mac_done),
-        .mac_cmd(mac_cmd),
+        .alu_busy(alu_busy),
+        .alu_done(alu_done),
+        .alu_cmd(alu_cmd),
         .quantize_en(quantize_en),
         .activation_en(activation_en),
         .pe_ready(pe_ready),
@@ -47,8 +47,8 @@ module PE_Controller_random_tb;
     int fail_count = 0;
 
     // Sequential Reference Model
-    always @(posedge clk or negedge rst) begin
-        if (!rst) begin
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
             expected_state <= 1'b0; // IDLE
             expected_mac_cmd <= 5'b00000;
             expected_q_en <= 1'b0;
@@ -95,9 +95,9 @@ module PE_Controller_random_tb;
 
     // Real-Time Checker (Evaluates on negedge to let signals settle)
     always @(negedge clk) begin
-        if (rst) begin
-            if (mac_cmd !== expected_mac_cmd) begin
-                $display("[FAIL] mac_cmd mismatch at %0t. Exp %0d, Got %0d", $time, expected_mac_cmd, mac_cmd);
+        if (rst_n) begin
+            if (alu_cmd !== expected_mac_cmd) begin
+                $display("[FAIL] mac_cmd mismatch at %0t. Exp %0d, Got %0d", $time, expected_mac_cmd, alu_cmd);
                 fail_count++;
             end
             if (quantize_en !== expected_q_en) begin
@@ -160,4 +160,5 @@ module PE_Controller_random_tb;
         if (fail_count == 0) $display("Result: PERFECT PASS");
         $stop;
     end
+
 endmodule
