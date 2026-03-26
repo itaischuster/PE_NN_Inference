@@ -1,53 +1,72 @@
-`timescale 1ns / 1ps
-
 module Requantizer (
-    input wire clk,
-    input wire rst_n,
-    input wire quantize_en,
-    input wire signed [63:0] acc,
+    input wire signed [63:0] accumulator,
     input wire [5:0] shamt,
-
-    output reg [7:0] activation_in
+    input wire mode4x4,
+    output reg signed [7:0] activation_in
 );
 
-    // Operand Isolation
-    wire signed [63:0] isolated_acc = quantize_en ? acc : 64'sd0;
+    // Pad the input for the default round bit
+    wire signed [64:0] padded_data = {accumulator, 1'b0};
 
-    // Stage 1: Shift to expose the rounding bit
-    // Shift by (s-1) to drop the 0.5 fractional bit into the 0-th index
-    wire [5:0] stage1_shamt = (shamt == 6'd0) ? 6'd0 : (shamt - 1'b1);
-    wire signed [63:0] pre_rounded_val = $signed(isolated_acc) >>> stage1_shamt;
-    wire fractional_round_bit = (shamt == 6'd0) ? 1'b0 : pre_rounded_val[0];
+    // Two-Stage Barrel Shifter (Coarse and Fine)
+    wire signed [64:0] coarse_shifted = padded_data >>> {shamt[5:3], 3'b000};
+    wire signed [64:0] fine_shifted = coarse_shifted >>> shamt[2:0];
 
-    // Pre-Rounding Bounds Check
-    // Verify the upper 56 bits are sign extensions before doing math  
-    wire is_pos_in_bounds = ~(|(pre_rounded_val[63:8]));
-    wire is_neg_in_bounds =  &(pre_rounded_val[63:8]);
-    wire is_raw_val_in_bounds = is_pos_in_bounds | is_neg_in_bounds;
+    // Extract base components
+    wire round_bit = fine_shifted[0];
+    wire [7:0] pre_round_8bit = fine_shifted[8:1]; 
 
-    // Stage 2: 10-bit Addition & Final Scale
-    // Slice the bottom 10 bits for a fast addition, then shift by 1 to finish dividing
-    wire signed [9:0] rounded_10bit_slice = $signed(pre_rounded_val[9:0]) + fractional_round_bit;
-    wire signed [9:0] final_scaled_10bit = (shamt == 6'd0) ? rounded_10bit_slice : (rounded_10bit_slice >>> 1);
-    
-    // Post-Rounding Bounds Check
-    // Catch edge cases where adding the round bit pushed a valid number out of bounds
-    wire overflow_after_round = (!final_scaled_10bit[9]) && (|final_scaled_10bit[8:7]);
-    wire underflow_after_round = (final_scaled_10bit[9]) && (~&final_scaled_10bit[8:7]);
-    
-    // Final Clamping Multiplexers
-    wire signed [7:0] final_clamped_val = (!is_raw_val_in_bounds) ? ((pre_rounded_val[63] == 1'b0) ? 8'sd127 : -8'sd128) : 
-            (overflow_after_round) ? 8'sd127 : 
-            (underflow_after_round) ? -8'sd128 : final_scaled_10bit[7:0];
+    // Shared Incrementer
+    wire [7:0] rounded_8bit = pre_round_8bit + round_bit;
 
-    // Output Register
-    always @(posedge clk or negedge rst_n) begin
-        if (!rst_n) begin
-            activation_in <= 8'b0;
-        end else if (quantize_en) begin
-            activation_in <= final_clamped_val;
+    // Shared Overflow Trees (Cascaded)
+    wire [56:0] upper_57 = fine_shifted[64:8];
+    wire nor_tree_57 = ~|upper_57;
+    wire and_tree_57 =  &upper_57;
+
+    // Build the 4-bit extension for the 4-bit mode
+    wire [3:0] mid_4 = fine_shifted[7:4];
+    wire nor_tree_mid = ~|mid_4;
+    wire and_tree_mid =  &mid_4;
+
+    // Cascade them to create the 61-bit checks
+    wire nor_tree_61 = nor_tree_57 & nor_tree_mid;
+    wire and_tree_61 = and_tree_57 & and_tree_mid;
+
+    // Truncation flags
+    wire trunc_ovf_8 = ~(nor_tree_57 | and_tree_57);
+    wire trunc_ovf_4 = ~(nor_tree_61 | and_tree_61);
+
+    // Optimized Rounding Overflow (Sign-Toggle Trick)
+    // A rounding overflow only happens if a positive number wraps to a negative number.
+    wire round_ovf_8 = (~pre_round_8bit[7]) & rounded_8bit[7];
+    wire round_ovf_4 = (~pre_round_8bit[3]) & rounded_8bit[3];
+
+    // Merged Clamping Conditions: out-of-bounds AND positive OR rounding overflowed / out-of-bounds AND negative
+    wire clamp_max_pos_8 = (trunc_ovf_8 & ~accumulator[63]) | round_ovf_8;
+    wire clamp_min_neg_8 = (trunc_ovf_8 & accumulator[63]);
+
+    wire clamp_max_pos_4 = (trunc_ovf_4 & ~accumulator[63]) | round_ovf_4;
+    wire clamp_min_neg_4 = (trunc_ovf_4 & accumulator[63]);
+
+    always @(*) begin
+        if (mode4x4) begin
+            if (clamp_max_pos_4) begin
+                activation_in = 8'd7;
+            end else if (clamp_min_neg_4) begin
+                activation_in = -8'd8;
+            end else begin
+                activation_in = {{4{rounded_8bit[3]}}, rounded_8bit[3:0]};
+            end
+        end else begin
+            if (clamp_max_pos_8) begin
+                activation_in = 8'd127;
+            end else if (clamp_min_neg_8) begin
+                activation_in = -8'd128;
+            end else begin
+                activation_in = rounded_8bit;
+            end
         end
     end
-
 
 endmodule
