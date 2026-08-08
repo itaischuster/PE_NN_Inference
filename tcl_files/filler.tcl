@@ -18,3 +18,5 @@ tcbn28hpcplusbwp30p140/GFILL3BWP30P140
 tcbn28hpcplusbwp30p140/GFILL4BWP30P140
 } \
 -prefix FILLER
+
+connect_pg_net -automatic
