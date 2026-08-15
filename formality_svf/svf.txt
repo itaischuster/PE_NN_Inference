@@ -1,0 +1,2690 @@
+
+
+##################################################################################
+# Copyright 2002-2026 Synopsys, Inc.  All rights reserved.
+# This Synopsys product and all associated documentation and files are
+# proprietary to Synopsys, Inc. and may only be used pursuant to the terms
+# and conditions of a written license agreement with Synopsys, Inc. All other
+# use, reproduction, modification, or distribution of the Synopsys product or
+# the associated documentation or files is strictly prohibited.
+##################################################################################
+
+
+## SVF file read: /project/tsmc28mmwave/users/itaischuster/ws/PE_BE/svf_files/PE.svf
+
+guide \
+  -tool { Fusion Compiler } \
+  -version { V-2023.12-SP3 built May 07, 2024 } \
+  -SVF { 21.230 } \
+  -timestamp { Sun Jun 14 16:31:57 2026 } 
+
+## Operation Id: 1
+guide_environment \
+  { { dc_product_version V-2023.12-SP3 } \
+    { dc_product_build_date { May 07, 2024 } } \
+    { hdlin_allow_4state_parameters true } \
+    { hdlin_array_instance_naming_style %s[%d] } \
+    { hdlin_cell_naming_style %s[%d] } \
+    { hdlin_enable_hier_naming false } \
+    { hdlin_enable_upf_compatible_naming false } \
+    { hdlin_vhdl_preserve_case false } \
+    { hdlin_generate_naming_style %s_%d } \
+    { hdlin_generate_separator_style _ } \
+    { hdlin_hierarchy_separator_style / } \
+    { hdlin_interfacecontent_naming_style %s.%s } \
+    { hdl_naming_threshold 20 } \
+    { hdlin_preserve_sequential none } \
+    { hdlin_sverilog_std 2017 } \
+    { hdlin_sv_packages dont_chain } \
+    { hdlin_sv_union_member_naming false } \
+    { template_naming_style %s_%p } \
+    { template_parameter_style %s%d } \
+    { template_separator_style _ } \
+    { hdlin_use_hierarchical_register_names false } \
+    { hdlin_use_vhdl_gen_hierarchy_for_naming false } \
+    { hdlin_vrlg_std 2005 } \
+    { hdlin_v2005_replication_semantics true } \
+    { hdlin_vhdl_std 2008 } \
+    { hdlin_while_loop_iterations 4096 } \
+    { hdlin_dwversion DWBB_202312.2 } \
+    { hdlin_out_of_bounds_X_to_0 false } \
+    { hdlin_enable_verilog_configurations_array_n_block true } \
+    { hdlin_enable_persistent_macros false } \
+    { hdlin_persistent_macros_filename syn_auto_generated_macro_file.sv } \
+    { compile_seqmap_propagate_high_effort true } \
+    { compile_seqmap_propagate_high_effort true } \
+    { issue_guide_hier_map_during_relink false } \
+    { synopsys_root /tools/synopsys/fc/V-2023.12-SP3 } \
+    { cwd /project/tsmc28mmwave/users/itaischuster/ws/PE_BE } \
+    { search_path { . /tools/synopsys/fc/V-2023.12-SP3/dw/syn_ver /tools/synopsys/fc/V-2023.12-SP3/dw/sim_ver /tools/synopsys/fc/V-2023.12-SP3/libraries/syn scripts design_data } } \
+    { analyze { -format verilog -work WORK \{ v_code/Controller.v v_code/MP_Multiplier.v v_code/IO_Block.v v_code/Activation_Block.v v_code/Multiplier4.v v_code/PPU.v v_code/Requantizer.v v_code/MAC_and_SCALE.v v_code/PE.v v_code/reset_sync.v \} } } } 
+
+## Operation Id: 2
+guide_file_info \
+  -file { ./v_code/reset_sync.v } \
+  -cksum_file { Svf1/checksums/28994_d57aa45250b5c286e523e0342d4996c1.cksum } \
+  -language { svfFileInfoLangVerilog } \
+  -nameID { 28994 } \
+  -cksum { d57aa45250b5c286e523e0342d4996c1 } \
+  -version { 21.230 } 
+
+## Operation Id: 3
+guide_file_info \
+  -file { ./v_code/PE.v } \
+  -cksum_file { Svf1/checksums/40373_ca19ac2c99ef73514a38f3e5030ff0ee.cksum } \
+  -language { svfFileInfoLangVerilog } \
+  -nameID { 40373 } \
+  -cksum { ca19ac2c99ef73514a38f3e5030ff0ee } \
+  -version { 21.230 } 
+
+## Operation Id: 4
+guide_file_info \
+  -file { ./v_code/MP_Multiplier.v } \
+  -cksum_file { Svf1/checksums/49476_486a301c035c39a9095361db5c5b9a76.cksum } \
+  -language { svfFileInfoLangVerilog } \
+  -nameID { 49476 } \
+  -cksum { 486a301c035c39a9095361db5c5b9a76 } \
+  -version { 21.230 } 
+
+## Operation Id: 5
+guide_file_info \
+  -file { ./v_code/Controller.v } \
+  -cksum_file { Svf1/checksums/50439_33676d3a2265d6c8dab1f498deece9f5.cksum } \
+  -language { svfFileInfoLangVerilog } \
+  -nameID { 50439 } \
+  -cksum { 33676d3a2265d6c8dab1f498deece9f5 } \
+  -version { 21.230 } 
+
+## Operation Id: 6
+guide_file_info \
+  -file { ./v_code/MAC_and_SCALE.v } \
+  -cksum_file { Svf1/checksums/48144_36f1989cc5b653f872229e212e632323.cksum } \
+  -language { svfFileInfoLangVerilog } \
+  -nameID { 48144 } \
+  -cksum { 36f1989cc5b653f872229e212e632323 } \
+  -version { 21.230 } 
+
+## Operation Id: 7
+guide_file_info \
+  -file { ./v_code/Requantizer.v } \
+  -cksum_file { Svf1/checksums/37719_8d6dcff70d59ef835edf3d1d5e993ff3.cksum } \
+  -language { svfFileInfoLangVerilog } \
+  -nameID { 37719 } \
+  -cksum { 8d6dcff70d59ef835edf3d1d5e993ff3 } \
+  -version { 21.230 } 
+
+## Operation Id: 8
+guide_file_info \
+  -file { ./v_code/PPU.v } \
+  -cksum_file { Svf1/checksums/30239_de0bd8480865b7ee95744e1a57cd89fc.cksum } \
+  -language { svfFileInfoLangVerilog } \
+  -nameID { 30239 } \
+  -cksum { de0bd8480865b7ee95744e1a57cd89fc } \
+  -version { 21.230 } 
+
+## Operation Id: 9
+guide_file_info \
+  -file { ./v_code/Activation_Block.v } \
+  -cksum_file { Svf1/checksums/33259_8b4eb701504d6099079e403a82599acb.cksum } \
+  -language { svfFileInfoLangVerilog } \
+  -nameID { 33259 } \
+  -cksum { 8b4eb701504d6099079e403a82599acb } \
+  -version { 21.230 } 
+
+## Operation Id: 10
+guide_file_info \
+  -file { ./v_code/IO_Block.v } \
+  -cksum_file { Svf1/checksums/21813_818562c728cf65a9ea020bb6138ef034.cksum } \
+  -language { svfFileInfoLangVerilog } \
+  -nameID { 21813 } \
+  -cksum { 818562c728cf65a9ea020bb6138ef034 } \
+  -version { 21.230 } 
+
+## Operation Id: 11
+guide_file_info \
+  -file { ./v_code/Multiplier4.v } \
+  -cksum_file { Svf1/checksums/26782_2f91219be4749d9b2b3bb775ba53cf65.cksum } \
+  -language { svfFileInfoLangVerilog } \
+  -nameID { 26782 } \
+  -cksum { 2f91219be4749d9b2b3bb775ba53cf65 } \
+  -version { 21.230 } 
+
+## Operation Id: 12
+guide_environment \
+  { { elaborate { -work WORK PE } } } 
+
+## Operation Id: 13
+guide_hier_map \
+  -design { PE } \
+  -cells { u_controller } \
+  -linked { Controller } 
+
+## Operation Id: 14
+guide_hier_map \
+  -design { PE } \
+  -cells { u_mac_and_scale } \
+  -linked { MAC_and_SCALE } 
+
+## Operation Id: 15
+guide_hier_map \
+  -design { PE } \
+  -cells { u_ppu } \
+  -linked { PPU } 
+
+## Operation Id: 16
+guide_hier_map \
+  -design { PE } \
+  -cells { u_io_block } \
+  -linked { IO_Block } 
+
+## Operation Id: 17
+guide_hier_map \
+  -design { PE } \
+  -cells { u_reset_sync } \
+  -linked { reset_sync } 
+
+## Operation Id: 18
+guide_hier_map \
+  -design { MAC_and_SCALE } \
+  -cells { mult_0 mult_1 mult_2 } \
+  -cells { mult_3 } \
+  -linked { MP_Multiplier } 
+
+## Operation Id: 19
+guide_hier_map \
+  -design { MP_Multiplier } \
+  -cells { mult_00 mult_01 mult_10 } \
+  -cells { mult_11 } \
+  -linked { Multiplier4 } 
+
+## Operation Id: 20
+guide_hier_map \
+  -design { PPU } \
+  -cells { u_requantizer } \
+  -linked { Requantizer } 
+
+## Operation Id: 21
+guide_hier_map \
+  -design { PPU } \
+  -cells { u_activation_block } \
+  -linked { Activation_Block } 
+
+## Operation Id: 22
+guide_mark \
+  -type { svfMarkTypeBegin } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 23
+guide_mark \
+  -type { svfMarkTypeEnd } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 24
+guide_mark \
+  -type { svfMarkTypeBegin } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 25
+guide_mark \
+  -type { svfMarkTypeEnd } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 26
+guide_mark \
+  -type { svfMarkTypeBegin } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 27
+guide_mark \
+  -type { svfMarkTypeEnd } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 28
+guide_mark \
+  -type { svfMarkTypeBegin } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 29
+guide_mark \
+  -type { svfMarkTypeEnd } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 30
+guide_mark \
+  -type { svfMarkTypeBegin } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 31
+guide_mark \
+  -type { svfMarkTypeEnd } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 32
+guide_mark \
+  -type { svfMarkTypeBegin } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 33
+guide_mark \
+  -type { svfMarkTypeEnd } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 34
+guide_mark \
+  -type { svfMarkTypeBegin } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 35
+guide_mark \
+  -type { svfMarkTypeEnd } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 36
+guide_mark \
+  -type { svfMarkTypeBegin } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 37
+guide_replace \
+  -origin { Presto_rounding } \
+  -design { Requantizer } \
+  -input { 8 src_1 } \
+  -input { 1 src_2 } \
+  -output { 8 round_out } \
+  -pre_resource { { 8 } add_28 = ADD { { src_1 ZERO 8 } { src_2 ZERO 8 } } } \
+  -pre_assign { round_out = { add_28 ZERO 8 } } \
+  -post_resource { { 9 } concat_src = CONCAT { { src_1 ZERO 8 } { src_2 ZERO 1 } } } \
+  -post_resource { { 9 } add_28_round = ADD { { concat_src ZERO 9 } { U`b00000001 ZERO 9 } } } \
+  -post_assign { round_out = { add_28_round 8 1 ZERO 8 } } 
+
+## Operation Id: 38
+guide_mark \
+  -type { svfMarkTypeEnd } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 39
+guide_mark \
+  -type { svfMarkTypeBegin } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 40
+guide_mark \
+  -type { svfMarkTypeEnd } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 41
+guide_mark \
+  -type { svfMarkTypeBegin } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 42
+guide_mark \
+  -type { svfMarkTypeEnd } \
+  -phase { svfMarkPhasePresto } 
+
+## Operation Id: 43
+guide_environment \
+  { { save_block { -block PE/elaborate /project/tsmc28mmwave/users/itaischuster/ws/PE_BE/PE.dlib } } } 
+
+## Operation Id: 44
+guide_breakpoint \
+  -type { precompile } \
+  -cksum { 6e0047cf-b87f-4293-8f43-3f0d2996804a } 
+
+## Operation Id: 45
+guide_environment \
+  { { save_block { -block PE/BoundAndTap /project/tsmc28mmwave/users/itaischuster/ws/PE_BE/PE.dlib } } } 
+
+## Operation Id: 46
+guide_breakpoint \
+  -type { precompile } \
+  -cksum { bd88fb20-7f90-445d-8bb8-0d141b0e72df } 
+
+## Operation Id: 47
+guide_environment \
+  { { save_block { -block PE /project/tsmc28mmwave/users/itaischuster/ws/PE_BE/PE.dlib } } } 
+
+## Operation Id: 48
+guide_breakpoint \
+  -type { precompile } \
+  -cksum { 99f54200-c69d-4311-b7fe-c24aca66e5ae } 
+
+## Operation Id: 49
+guide_environment \
+  { { save_block { -block PE/Floorplan /project/tsmc28mmwave/users/itaischuster/ws/PE_BE/PE.dlib } } } 
+
+## Operation Id: 50
+guide_breakpoint \
+  -type { precompile } \
+  -cksum { bceb7f61-0e7d-4f84-9848-ab13d95c2b1a } 
+
+## Operation Id: 51
+guide_environment \
+  { { save_block { -block PE /project/tsmc28mmwave/users/itaischuster/ws/PE_BE/PE.dlib } } } 
+
+## Operation Id: 52
+guide_breakpoint \
+  -type { precompile } \
+  -cksum { eb102e2e-5308-4028-859d-ee4b07be38ea } 
+
+## Operation Id: 53
+guide_mark \
+  -type { svfMarkTypeSync } \
+  -phase { svfMarkPhaseFusion } \
+  -top { PE } \
+  -block { PE } \
+  -format { svfMarkFormatNone } \
+  -timestamp { Sun Jun 14 16:32:32 2026 } 
+
+## Operation Id: 54
+guide_ungroup \
+  -cells { mult_00 } \
+  -design { MP_Multiplier } 
+
+## Operation Id: 55
+guide_ungroup \
+  -cells { mult_01 } \
+  -design { MP_Multiplier } 
+
+## Operation Id: 56
+guide_ungroup \
+  -cells { mult_10 } \
+  -design { MP_Multiplier } 
+
+## Operation Id: 57
+guide_ungroup \
+  -cells { mult_11 } \
+  -design { MP_Multiplier } 
+
+## Operation Id: 58
+guide_ungroup \
+  -cells { mult_0 } \
+  -design { MAC_and_SCALE } 
+
+## Operation Id: 59
+guide_ungroup \
+  -cells { mult_1 } \
+  -design { MAC_and_SCALE } 
+
+## Operation Id: 60
+guide_ungroup \
+  -cells { mult_2 } \
+  -design { MAC_and_SCALE } 
+
+## Operation Id: 61
+guide_ungroup \
+  -cells { mult_3 } \
+  -design { MAC_and_SCALE } 
+
+## Operation Id: 62
+guide_ungroup \
+  -cells { u_requantizer } \
+  -design { PPU } 
+
+## Operation Id: 63
+guide_ungroup \
+  -cells { u_activation_block } \
+  -design { PPU } 
+
+## Operation Id: 64
+guide_ungroup \
+  -cells { u_reset_sync } \
+  -design { PE } 
+
+## Operation Id: 65
+guide_ungroup \
+  -cells { u_io_block } \
+  -design { PE } 
+
+## Operation Id: 66
+guide_ungroup \
+  -cells { u_controller } \
+  -design { PE } 
+
+## Operation Id: 67
+guide_ungroup \
+  -cells { u_mac_and_scale } \
+  -design { PE } 
+
+## Operation Id: 68
+guide_ungroup \
+  -cells { u_ppu } \
+  -design { PE } 
+
+## Operation Id: 69
+guide_environment \
+  { { clock_gating latch_and } \
+    { clock_gating latch_or } } 
+
+## Operation Id: 70
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { PE } \
+  -input { 8 source0 } \
+  -input { 13 source1 } \
+  -input { 13 source2 } \
+  -output { 16 O0 } \
+  -pre_resource { { 16 } u_mac_and_scale/mult_0/add_55 = ADD { { source0 ZERO 16 } { source1 SIGN 16 } } } \
+  -pre_resource { { 16 } u_mac_and_scale/mult_0/add_55_2 = ADD { { u_mac_and_scale/mult_0/add_55.out.1 ANY 16 } { source2 SIGN 16 } } } \
+  -pre_assign { O0 = { u_mac_and_scale/mult_0/add_55_2.out.1 ANY 16 } } \
+  -post_resource { { 16 } snps_ADD_197 = MADD { { source0 ZERO 16 } { source1 SIGN 16 } { source2 SIGN 16 } } } \
+  -post_assign { O0 = { snps_ADD_197.out.1 ANY 16 } } 
+
+## Operation Id: 71
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { PE } \
+  -input { 8 source1 } \
+  -input { 13 source2 } \
+  -input { 13 source3 } \
+  -input { 16 source0 } \
+  -output { 16 O0 } \
+  -pre_resource { { 16 } u_mac_and_scale/mult_0/add_55_3 = ADD { { snps_ADD_197.out.1 ANY 16 } { source0 ANY 16 } } } \
+  -pre_resource { { 16 } snps_ADD_197 = MADD { { source1 ZERO 16 } { source2 SIGN 16 } { source3 SIGN 16 } } } \
+  -pre_assign { O0 = { u_mac_and_scale/mult_0/add_55_3.out.1 ANY 16 } } \
+  -post_resource { { 16 } snps_ADD_198 = MADD { { source1 ZERO 16 } { source2 SIGN 16 } { source3 SIGN 16 } { source0 ANY 16 } } } \
+  -post_assign { O0 = { snps_ADD_198.out.1 ANY 16 } } 
+
+## Operation Id: 72
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { PE } \
+  -input { 1 source2 } \
+  -input { 32 source0 } \
+  -input { 32 source1 } \
+  -output { 32 O0 } \
+  -pre_resource { { 32 } u_mac_and_scale/add_193 = ADD { { source0 ANY 32 } { source1 ANY 32 } } } \
+  -pre_resource { { 32 } u_mac_and_scale/add_193_2 = ADD { { u_mac_and_scale/add_193.out.1 ANY 32 } { source2 ZERO 32 } } } \
+  -pre_assign { O0 = { u_mac_and_scale/add_193_2.out.1 ANY 32 } } \
+  -post_resource { { 32 } snps_ADD_199 = MADD { { source0 ANY 32 } { source1 ANY 32 } { source2 ZERO 32 } } } \
+  -post_assign { O0 = { snps_ADD_199.out.1 ANY 32 } } 
+
+## Operation Id: 73
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { PE } \
+  -input { 9 source2 } \
+  -input { 8 source0 } \
+  -input { 8 source1 } \
+  -output { 10 O0 } \
+  -pre_resource { { 9 } u_mac_and_scale/add_114 = ADD { { source0 SIGN 9 } { source1 SIGN 9 } } } \
+  -pre_resource { { 10 } u_mac_and_scale/add_118 = ADD { { source2 SIGN 10 } { u_mac_and_scale/add_114.out.1 SIGN 10 } } } \
+  -pre_assign { O0 = { u_mac_and_scale/add_118.out.1 ANY 10 } } \
+  -post_resource { { 10 } snps_ADD_200 = MADD { { source0 SIGN 10 } { source1 SIGN 10 } { source2 SIGN 10 } } } \
+  -post_assign { O0 = { snps_ADD_200.out.1 ANY 10 } } 
+
+## Operation Id: 74
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { PE } \
+  -input { 8 source0 } \
+  -input { 8 source1 } \
+  -input { 8 source2 } \
+  -input { 8 source3 } \
+  -output { 10 O0 } \
+  -pre_resource { { 9 } u_mac_and_scale/add_113 = ADD { { source0 SIGN 9 } { source1 SIGN 9 } } } \
+  -pre_resource { { 10 } snps_ADD_200 = MADD { { source2 SIGN 10 } { source3 SIGN 10 } { u_mac_and_scale/add_113.out.1 SIGN 10 } } } \
+  -pre_assign { O0 = { snps_ADD_200.out.1 ANY 10 } } \
+  -post_resource { { 10 } snps_ADD_201 = MADD { { source0 SIGN 10 } { source1 SIGN 10 } { source2 SIGN 10 } { source3 SIGN 10 } } } \
+  -post_assign { O0 = { snps_ADD_201.out.1 ANY 10 } } 
+
+## Operation Id: 75
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { PE } \
+  -input { 10 source0 } \
+  -input { 8 source1 } \
+  -input { 8 source2 } \
+  -input { 8 source3 } \
+  -input { 8 source4 } \
+  -output { 11 O0 } \
+  -pre_resource { { 11 } u_mac_and_scale/add_121 = ADD { { source0 SIGN 11 } { snps_ADD_201.out.1 SIGN 11 } } } \
+  -pre_resource { { 10 } snps_ADD_201 = MADD { { source1 SIGN 10 } { source2 SIGN 10 } { source3 SIGN 10 } { source4 SIGN 10 } } } \
+  -pre_assign { O0 = { u_mac_and_scale/add_121.out.1 ANY 11 } } \
+  -post_resource { { 11 } snps_ADD_202 = MADD { { source1 SIGN 11 } { source2 SIGN 11 } { source3 SIGN 11 } { source4 SIGN 11 } { source0 SIGN 11 } } } \
+  -post_assign { O0 = { snps_ADD_202.out.1 ANY 11 } } 
+
+## Operation Id: 76
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { PE } \
+  -input { 9 source2 } \
+  -input { 8 source0 } \
+  -input { 8 source1 } \
+  -output { 10 O0 } \
+  -pre_resource { { 9 } u_mac_and_scale/add_112 = ADD { { source0 SIGN 9 } { source1 SIGN 9 } } } \
+  -pre_resource { { 10 } u_mac_and_scale/add_117 = ADD { { source2 SIGN 10 } { u_mac_and_scale/add_112.out.1 SIGN 10 } } } \
+  -pre_assign { O0 = { u_mac_and_scale/add_117.out.1 ANY 10 } } \
+  -post_resource { { 10 } snps_ADD_203 = MADD { { source0 SIGN 10 } { source1 SIGN 10 } { source2 SIGN 10 } } } \
+  -post_assign { O0 = { snps_ADD_203.out.1 ANY 10 } } 
+
+## Operation Id: 77
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { PE } \
+  -input { 8 source0 } \
+  -input { 8 source1 } \
+  -input { 8 source2 } \
+  -input { 8 source3 } \
+  -output { 10 O0 } \
+  -pre_resource { { 9 } u_mac_and_scale/add_111 = ADD { { source0 SIGN 9 } { source1 SIGN 9 } } } \
+  -pre_resource { { 10 } snps_ADD_203 = MADD { { source2 SIGN 10 } { source3 SIGN 10 } { u_mac_and_scale/add_111.out.1 SIGN 10 } } } \
+  -pre_assign { O0 = { snps_ADD_203.out.1 ANY 10 } } \
+  -post_resource { { 10 } snps_ADD_204 = MADD { { source0 SIGN 10 } { source1 SIGN 10 } { source2 SIGN 10 } { source3 SIGN 10 } } } \
+  -post_assign { O0 = { snps_ADD_204.out.1 ANY 10 } } 
+
+## Operation Id: 78
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { PE } \
+  -input { 8 source4 } \
+  -input { 8 source5 } \
+  -input { 8 source6 } \
+  -input { 8 source7 } \
+  -input { 8 source0 } \
+  -input { 8 source1 } \
+  -input { 8 source2 } \
+  -input { 8 source3 } \
+  -output { 11 O0 } \
+  -pre_resource { { 11 } snps_ADD_202 = MADD { { source0 SIGN 11 } { source1 SIGN 11 } { source2 SIGN 11 } { source3 SIGN 11 } { snps_ADD_204.out.1 SIGN 11 } } } \
+  -pre_resource { { 10 } snps_ADD_204 = MADD { { source4 SIGN 10 } { source5 SIGN 10 } { source6 SIGN 10 } { source7 SIGN 10 } } } \
+  -pre_assign { O0 = { snps_ADD_202.out.1 ANY 11 } } \
+  -post_resource { { 11 } snps_ADD_205 = MADD { { source4 SIGN 11 } { source5 SIGN 11 } { source6 SIGN 11 } { source7 SIGN 11 } { source0 SIGN 11 } { source1 SIGN 11 } { source2 SIGN 11 } { source3 SIGN 11 } } } \
+  -post_assign { O0 = { snps_ADD_205.out.1 ANY 11 } } 
+
+## Operation Id: 79
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { PE } \
+  -input { 8 source0 } \
+  -input { 13 source1 } \
+  -input { 13 source2 } \
+  -output { 16 O0 } \
+  -pre_resource { { 16 } u_mac_and_scale/mult_3/add_55 = ADD { { source0 ZERO 16 } { source1 SIGN 16 } } } \
+  -pre_resource { { 16 } u_mac_and_scale/mult_3/add_55_2 = ADD { { u_mac_and_scale/mult_3/add_55.out.1 ANY 16 } { source2 SIGN 16 } } } \
+  -pre_assign { O0 = { u_mac_and_scale/mult_3/add_55_2.out.1 ANY 16 } } \
+  -post_resource { { 16 } snps_ADD_206 = MADD { { source0 ZERO 16 } { source1 SIGN 16 } { source2 SIGN 16 } } } \
+  -post_assign { O0 = { snps_ADD_206.out.1 ANY 16 } } 
+
+## Operation Id: 80
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { PE } \
+  -input { 8 source1 } \
+  -input { 13 source2 } \
+  -input { 13 source3 } \
+  -input { 16 source0 } \
+  -output { 16 O0 } \
+  -pre_resource { { 16 } u_mac_and_scale/mult_3/add_55_3 = ADD { { snps_ADD_206.out.1 ANY 16 } { source0 ANY 16 } } } \
+  -pre_resource { { 16 } snps_ADD_206 = MADD { { source1 ZERO 16 } { source2 SIGN 16 } { source3 SIGN 16 } } } \
+  -pre_assign { O0 = { u_mac_and_scale/mult_3/add_55_3.out.1 ANY 16 } } \
+  -post_resource { { 16 } snps_ADD_207 = MADD { { source1 ZERO 16 } { source2 SIGN 16 } { source3 SIGN 16 } { source0 ANY 16 } } } \
+  -post_assign { O0 = { snps_ADD_207.out.1 ANY 16 } } 
+
+## Operation Id: 81
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { PE } \
+  -input { 8 source0 } \
+  -input { 13 source1 } \
+  -input { 13 source2 } \
+  -output { 16 O0 } \
+  -pre_resource { { 16 } u_mac_and_scale/mult_2/add_55 = ADD { { source0 ZERO 16 } { source1 SIGN 16 } } } \
+  -pre_resource { { 16 } u_mac_and_scale/mult_2/add_55_2 = ADD { { u_mac_and_scale/mult_2/add_55.out.1 ANY 16 } { source2 SIGN 16 } } } \
+  -pre_assign { O0 = { u_mac_and_scale/mult_2/add_55_2.out.1 ANY 16 } } \
+  -post_resource { { 16 } snps_ADD_208 = MADD { { source0 ZERO 16 } { source1 SIGN 16 } { source2 SIGN 16 } } } \
+  -post_assign { O0 = { snps_ADD_208.out.1 ANY 16 } } 
+
+## Operation Id: 82
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { PE } \
+  -input { 8 source1 } \
+  -input { 13 source2 } \
+  -input { 13 source3 } \
+  -input { 16 source0 } \
+  -output { 16 O0 } \
+  -pre_resource { { 16 } u_mac_and_scale/mult_2/add_55_3 = ADD { { snps_ADD_208.out.1 ANY 16 } { source0 ANY 16 } } } \
+  -pre_resource { { 16 } snps_ADD_208 = MADD { { source1 ZERO 16 } { source2 SIGN 16 } { source3 SIGN 16 } } } \
+  -pre_assign { O0 = { u_mac_and_scale/mult_2/add_55_3.out.1 ANY 16 } } \
+  -post_resource { { 16 } snps_ADD_209 = MADD { { source1 ZERO 16 } { source2 SIGN 16 } { source3 SIGN 16 } { source0 ANY 16 } } } \
+  -post_assign { O0 = { snps_ADD_209.out.1 ANY 16 } } 
+
+## Operation Id: 83
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { PE } \
+  -input { 17 source2 } \
+  -input { 16 source0 } \
+  -input { 16 source1 } \
+  -output { 18 O0 } \
+  -pre_resource { { 17 } u_mac_and_scale/add_133 = ADD { { source0 SIGN 17 } { source1 SIGN 17 } } } \
+  -pre_resource { { 18 } u_mac_and_scale/add_136 = ADD { { source2 SIGN 18 } { u_mac_and_scale/add_133.out.1 SIGN 18 } } } \
+  -pre_assign { O0 = { u_mac_and_scale/add_136.out.1 ANY 18 } } \
+  -post_resource { { 18 } snps_ADD_210 = MADD { { source0 SIGN 18 } { source1 SIGN 18 } { source2 SIGN 18 } } } \
+  -post_assign { O0 = { snps_ADD_210.out.1 ANY 18 } } 
+
+## Operation Id: 84
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { PE } \
+  -input { 8 source0 } \
+  -input { 13 source1 } \
+  -input { 13 source2 } \
+  -output { 16 O0 } \
+  -pre_resource { { 16 } u_mac_and_scale/mult_1/add_55 = ADD { { source0 ZERO 16 } { source1 SIGN 16 } } } \
+  -pre_resource { { 16 } u_mac_and_scale/mult_1/add_55_2 = ADD { { u_mac_and_scale/mult_1/add_55.out.1 ANY 16 } { source2 SIGN 16 } } } \
+  -pre_assign { O0 = { u_mac_and_scale/mult_1/add_55_2.out.1 ANY 16 } } \
+  -post_resource { { 16 } snps_ADD_211 = MADD { { source0 ZERO 16 } { source1 SIGN 16 } { source2 SIGN 16 } } } \
+  -post_assign { O0 = { snps_ADD_211.out.1 ANY 16 } } 
+
+## Operation Id: 85
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { PE } \
+  -input { 8 source1 } \
+  -input { 13 source2 } \
+  -input { 13 source3 } \
+  -input { 16 source0 } \
+  -output { 16 O0 } \
+  -pre_resource { { 16 } u_mac_and_scale/mult_1/add_55_3 = ADD { { snps_ADD_211.out.1 ANY 16 } { source0 ANY 16 } } } \
+  -pre_resource { { 16 } snps_ADD_211 = MADD { { source1 ZERO 16 } { source2 SIGN 16 } { source3 SIGN 16 } } } \
+  -pre_assign { O0 = { u_mac_and_scale/mult_1/add_55_3.out.1 ANY 16 } } \
+  -post_resource { { 16 } snps_ADD_212 = MADD { { source1 ZERO 16 } { source2 SIGN 16 } { source3 SIGN 16 } { source0 ANY 16 } } } \
+  -post_assign { O0 = { snps_ADD_212.out.1 ANY 16 } } 
+
+## Operation Id: 86
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { PE } \
+  -input { 16 source0 } \
+  -input { 16 source1 } \
+  -input { 16 source2 } \
+  -input { 16 source3 } \
+  -output { 18 O0 } \
+  -pre_resource { { 17 } u_mac_and_scale/add_132 = ADD { { source0 SIGN 17 } { source1 SIGN 17 } } } \
+  -pre_resource { { 18 } snps_ADD_210 = MADD { { source2 SIGN 18 } { source3 SIGN 18 } { u_mac_and_scale/add_132.out.1 SIGN 18 } } } \
+  -pre_assign { O0 = { snps_ADD_210.out.1 ANY 18 } } \
+  -post_resource { { 18 } snps_ADD_213 = MADD { { source0 SIGN 18 } { source1 SIGN 18 } { source2 SIGN 18 } { source3 SIGN 18 } } } \
+  -post_assign { O0 = { snps_ADD_213.out.1 ANY 18 } } 
+
+## Operation Id: 87
+guide_replace \
+  -origin { ExTra_MOP_DECOMPOSE } \
+  -design { PE } \
+  -input { 8 source0 } \
+  -input { 8 source1 } \
+  -input { 8 source2 } \
+  -input { 8 source3 } \
+  -input { 8 source4 } \
+  -input { 8 source5 } \
+  -input { 8 source6 } \
+  -input { 8 source7 } \
+  -output { 11 O0 } \
+  -pre_resource { { 11 } snps_ADD_205 = MADD { { source0 SIGN 11 } { source1 SIGN 11 } { source2 SIGN 11 } { source3 SIGN 11 } { source4 SIGN 11 } { source5 SIGN 11 } { source6 SIGN 11 } { source7 SIGN 11 } } } \
+  -pre_assign { O0 = { snps_ADD_205.out.1 ANY 11 } } \
+  -post_resource { { 11 } snps_ADD_217 = MADD { { source3 SIGN 11 } { source4 SIGN 11 } { source5 SIGN 11 } { source6 SIGN 11 } { source7 SIGN 11 } } } \
+  -post_resource { { 11 } snps_ADD_218 = MADD { { source0 SIGN 11 } { source1 SIGN 11 } { source2 SIGN 11 } { snps_ADD_217.out.1 ANY 11 } } } \
+  -post_assign { O0 = { snps_ADD_218.out.1 ANY 11 } } 
+
+## Operation Id: 88
+guide_replace \
+  -origin { ExTra_MOP_REORDER } \
+  -design { PE } \
+  -input { 8 source0 } \
+  -input { 8 source1 } \
+  -input { 8 source2 } \
+  -input { 11 source3 } \
+  -output { 11 O0 } \
+  -pre_resource { { 11 } snps_ADD_218 = MADD { { source0 SIGN 11 } { source1 SIGN 11 } { source2 SIGN 11 } { source3 ANY 11 } } } \
+  -pre_assign { O0 = { snps_ADD_218.out.1 ANY 11 } } \
+  -post_resource { { 11 } snps_ADD_219 = MADD { { source3 ANY 11 } { source0 SIGN 11 } { source1 SIGN 11 } { source2 SIGN 11 } } } \
+  -post_assign { O0 = { snps_ADD_219.out.1 ANY 11 } } 
+
+## Operation Id: 89
+guide_replace \
+  -origin { ExTra_MUTEX_SHARE } \
+  -design { PE } \
+  -input { 1 source4 } \
+  -input { 1 source5 } \
+  -input { 8 source7 } \
+  -input { 8 source8 } \
+  -input { 8 source9 } \
+  -input { 16 source0 } \
+  -input { 16 source1 } \
+  -input { 16 source2 } \
+  -input { 16 source3 } \
+  -input { 11 source6 } \
+  -output { 32 O0 } \
+  -pre_resource { { 18 } snps_ADD_213 = MADD { { source0 SIGN 18 } { source1 SIGN 18 } { source2 SIGN 18 } { source3 SIGN 18 } } } \
+  -pre_resource { { 32 } snps_SELECT_214 = SELECT { { source4 } { source5 } { snps_ADD_219.out.1 SIGN 32 } { snps_ADD_213.out.1 SIGN 32 } } } \
+  -pre_resource { { 11 } snps_ADD_219 = MADD { { source6 ANY 11 } { source7 SIGN 11 } { source8 SIGN 11 } { source9 SIGN 11 } } } \
+  -pre_assign { O0 = { snps_SELECT_214.out.1 ANY 32 } } \
+  -post_resource { { 18 } snps_ADD_220 = MADD { { snps_SELECT_221.out.1 SIGN 18 } { snps_SELECT_222.out.1 SIGN 18 } { snps_SELECT_223.out.1 SIGN 18 } { snps_SELECT_224.out.1 SIGN 18 } } } \
+  -post_resource { { 16 } snps_SELECT_221 = SELECT { { source4 } { source5 } { source6 ZERO 16 } { source0 ANY 16 } } } \
+  -post_resource { { 16 } snps_SELECT_222 = SELECT { { source4 } { source5 } { source7 SIGN 16 } { source1 ANY 16 } } } \
+  -post_resource { { 16 } snps_SELECT_223 = SELECT { { source4 } { source5 } { source8 SIGN 16 } { source2 ANY 16 } } } \
+  -post_resource { { 16 } snps_SELECT_224 = SELECT { { source4 } { source5 } { source9 SIGN 16 } { source3 ANY 16 } } } \
+  -post_resource { { 32 } snps_SELECT_226 = SELECT { { source4 } { source5 } { snps_ADD_220.out.1 10 0 SIGN 32 } { snps_ADD_220.out.1 SIGN 32 } } } \
+  -post_assign { O0 = { snps_SELECT_226.out.1 ANY 32 } } 
+
+## Operation Id: 90
+guide_replace \
+  -origin { ExTra_MUTEX_UNSHARE } \
+  -design { PE } \
+  -input { 1 source0 } \
+  -input { 1 source1 } \
+  -input { 9 source2 } \
+  -input { 9 source4 } \
+  -input { 9 source3 } \
+  -input { 9 source6 } \
+  -input { 9 source5 } \
+  -output { 11 O0 } \
+  -pre_resource { { 8 } snps_SELECT_29 = SELECT { { source0 } { source1 } { source2 7 0 ANY 8 } { U`b00000000 } } } \
+  -pre_resource { { 8 } snps_SELECT_30 = SELECT { { source0 } { source1 } { source3 7 0 ANY 8 } { U`b00000000 } } } \
+  -pre_resource { { 8 } snps_SELECT_31 = SELECT { { source0 } { source1 } { source4 7 0 ANY 8 } { U`b00000000 } } } \
+  -pre_resource { { 8 } snps_SELECT_32 = SELECT { { source0 } { source1 } { source5 7 0 ANY 8 } { U`b00000000 } } } \
+  -pre_resource { { 8 } snps_SELECT_33 = SELECT { { source0 } { source1 } { source6 7 0 ANY 8 } { U`b00000000 } } } \
+  -pre_resource { { 11 } snps_ADD_217 = MADD { { snps_SELECT_29.out.1 SIGN 11 } { snps_SELECT_30.out.1 SIGN 11 } { snps_SELECT_31.out.1 SIGN 11 } { snps_SELECT_32.out.1 SIGN 11 } { snps_SELECT_33.out.1 SIGN 11 } } } \
+  -pre_assign { O0 = { snps_ADD_217.out.1 ANY 11 } } \
+  -post_resource { { 11 } snps_SELECT_229 = SELECT { { source0 } { source1 } { snps_ADD_230.out.1 ANY 11 } { snps_ADD_231.out.1 ANY 11 } } } \
+  -post_resource { { 11 } snps_ADD_230 = MADD { { source2 7 0 SIGN 11 } { source3 7 0 SIGN 11 } { source4 7 0 SIGN 11 } { source5 7 0 SIGN 11 } { source6 7 0 SIGN 11 } } } \
+  -post_resource { { 11 } snps_ADD_231 = MADD { { S`b00000000000 } { S`b00000000000 } { S`b00000000000 } { S`b00000000000 } { S`b00000000000 } } } \
+  -post_assign { O0 = { snps_SELECT_229.out.1 ANY 11 } } 
+
+## Operation Id: 91
+guide_replace \
+  -origin { ExTra_MOP_ARMS } \
+  -design { PE } \
+  -input { } \
+  -output { 11 O0 } \
+  -pre_resource { { 11 } snps_ADD_231 = MADD { { S`b00000000000 } { S`b00000000000 } { S`b00000000000 } { S`b00000000000 } { S`b00000000000 } } } \
+  -pre_assign { O0 = { snps_ADD_231.out.1 ANY 11 } } \
+  -post_assign { O0 = { U`b00000000000 } } 
+
+## Operation Id: 92
+guide_change_names \
+  -design { PE } \
+  { { cell u_mac_and_scale/add_149 snps_ADD_15 } } 
+
+## Operation Id: 93
+guide_change_names \
+  -design { PE } \
+  { { cell u_mac_and_scale/add_152 snps_ADD_17 } } 
+
+## Operation Id: 94
+guide_merge \
+  -design { PE } \
+  -datapath { DP_OP_244_18871_65499_J1 } \
+  -type { svfMergeDPOP } \
+  -input { 24 PI_0 } \
+  -input { 40 PI_1 } \
+  -input { 1 PI_2 } \
+  -input { 1 PI_3 } \
+  -input { 8 PI_4 } \
+  -input { 13 PI_5 } \
+  -input { 13 PI_6 } \
+  -input { 16 PI_7 } \
+  -output { 40 PO_0 } \
+  -output { 16 PO_1 } \
+  -pre_resource { { 24 } snps_ADD_15 = ADD { { PI_0 ZERO 24 } { snps_SBX_110.out.1 ZERO 24 } } } \
+  -pre_resource { { 40 } snps_ADD_17 = ADD { { PI_1 ANY 40 } { snps_SBX_112.out.1 ANY 40 } } } \
+  -pre_resource { { 16 } snps_SELECT_41 = SELECT { { PI_2 } { PI_3 } { snps_ADD_207.out.1 ZERO 16 } { U`b0000000000000000 } } } \
+  -pre_resource { { 24 } snps_SBX_110 = CONCAT { { snps_SELECT_41.out.1 ANY 16 } { U`b00000000 } } } \
+  -pre_resource { { 40 } snps_SBX_112 = CONCAT { { snps_ADD_15.out.1 ANY 24 } { U`b0000000000000000 } } } \
+  -pre_resource { { 16 } snps_ADD_207 = MADD { { PI_4 ZERO 16 } { PI_5 SIGN 16 } { PI_6 SIGN 16 } { PI_7 ZERO 16 } } } \
+  -pre_assign { PO_0 = { snps_ADD_17.out.1 ANY 40 } } \
+  -pre_assign { PO_1 = { snps_ADD_207.out.1 ANY 16 } } 
+
+## Operation Id: 95
+guide_change_names \
+  -design { PE } \
+  { { cell u_mac_and_scale/add_148 snps_ADD_14 } } 
+
+## Operation Id: 96
+guide_merge \
+  -design { PE } \
+  -datapath { DP_OP_245_33587_65499_J1 } \
+  -type { svfMergeDPOP } \
+  -input { 24 PI_0 } \
+  -input { 1 PI_1 } \
+  -input { 1 PI_2 } \
+  -input { 8 PI_3 } \
+  -input { 13 PI_4 } \
+  -input { 13 PI_5 } \
+  -input { 16 PI_6 } \
+  -output { 24 PO_0 } \
+  -output { 16 PO_1 } \
+  -pre_resource { { 24 } snps_ADD_14 = ADD { { PI_0 ANY 24 } { snps_SBX_108.out.1 ANY 24 } } } \
+  -pre_resource { { 16 } snps_SELECT_39 = SELECT { { PI_1 } { PI_2 } { snps_ADD_212.out.1 ZERO 16 } { U`b0000000000000000 } } } \
+  -pre_resource { { 24 } snps_SBX_108 = CONCAT { { snps_SELECT_39.out.1 ANY 16 } { U`b00000000 } } } \
+  -pre_resource { { 16 } snps_ADD_212 = MADD { { PI_3 ZERO 16 } { PI_4 SIGN 16 } { PI_5 SIGN 16 } { PI_6 ZERO 16 } } } \
+  -pre_assign { PO_0 = { snps_ADD_14.out.1 ANY 24 } } \
+  -pre_assign { PO_1 = { snps_ADD_212.out.1 ANY 16 } } 
+
+## Operation Id: 97
+guide_merge \
+  -design { PE } \
+  -datapath { DP_OP_246_35163_65499_J1 } \
+  -type { svfMergeDPOP } \
+  -input { 8 PI_0 } \
+  -input { 13 PI_1 } \
+  -input { 13 PI_2 } \
+  -input { 16 PI_3 } \
+  -output { 16 PO_0 } \
+  -pre_resource { { 16 } snps_ADD_209 = MADD { { PI_0 ZERO 16 } { PI_1 SIGN 16 } { PI_2 SIGN 16 } { PI_3 ANY 16 } } } \
+  -pre_assign { PO_0 = { snps_ADD_209.out.1 ANY 16 } } 
+
+## Operation Id: 98
+guide_merge \
+  -design { PE } \
+  -datapath { DP_OP_247_35163_65499_J1 } \
+  -type { svfMergeDPOP } \
+  -input { 8 PI_0 } \
+  -input { 13 PI_1 } \
+  -input { 13 PI_2 } \
+  -input { 16 PI_3 } \
+  -output { 16 PO_0 } \
+  -pre_resource { { 16 } snps_ADD_198 = MADD { { PI_0 ZERO 16 } { PI_1 SIGN 16 } { PI_2 SIGN 16 } { PI_3 ANY 16 } } } \
+  -pre_assign { PO_0 = { snps_ADD_198.out.1 ANY 16 } } 
+
+## Operation Id: 99
+guide_merge \
+  -design { PE } \
+  -datapath { DP_OP_248_26668_65499_J1 } \
+  -type { svfMergeDPOP } \
+  -input { 8 PI_0 } \
+  -input { 8 PI_1 } \
+  -input { 8 PI_2 } \
+  -input { 8 PI_3 } \
+  -input { 8 PI_4 } \
+  -output { 11 PO_0 } \
+  -pre_resource { { 11 } snps_ADD_230 = MADD { { PI_0 SIGN 11 } { PI_1 SIGN 11 } { PI_2 SIGN 11 } { PI_3 SIGN 11 } { PI_4 SIGN 11 } } } \
+  -pre_assign { PO_0 = { snps_ADD_230.out.1 ANY 11 } } 
+
+## Operation Id: 100
+guide_merge \
+  -design { PE } \
+  -datapath { DP_OP_249_24682_65499_J1 } \
+  -type { svfMergeDPOP } \
+  -input { 32 PI_0 } \
+  -input { 32 PI_1 } \
+  -input { 1 PI_2 } \
+  -output { 32 PO_0 } \
+  -pre_resource { { 32 } snps_ADD_199 = MADD { { PI_0 ANY 32 } { PI_1 ANY 32 } { PI_2 ZERO 32 } } } \
+  -pre_assign { PO_0 = { snps_ADD_199.out.1 ANY 32 } } 
+
+## Operation Id: 101
+guide_replace \
+  -origin { ExTra_MOP_DECOMPOSE } \
+  -design { PE } \
+  -input { 16 source0 } \
+  -input { 16 source1 } \
+  -input { 16 source2 } \
+  -input { 16 source3 } \
+  -output { 18 O0 } \
+  -pre_resource { { 18 } snps_ADD_220 = MADD { { source0 SIGN 18 } { source1 SIGN 18 } { source2 SIGN 18 } { source3 SIGN 18 } } } \
+  -pre_assign { O0 = { snps_ADD_220.out.1 ANY 18 } } \
+  -post_resource { { 17 } snps_ADD_251 = ADD { { source0 SIGN 17 } { source1 SIGN 17 } } } \
+  -post_resource { { 18 } snps_ADD_252 = MADD { { source2 SIGN 18 } { source3 SIGN 18 } { snps_ADD_251.out.1 SIGN 18 } } } \
+  -post_assign { O0 = { snps_ADD_252.out.1 ANY 18 } } 
+
+## Operation Id: 102
+guide_replace \
+  -origin { ExTra_MOP_DECOMPOSE } \
+  -design { PE } \
+  -input { 16 source0 } \
+  -input { 16 source1 } \
+  -input { 17 source2 } \
+  -output { 18 O0 } \
+  -pre_resource { { 18 } snps_ADD_252 = MADD { { source0 SIGN 18 } { source1 SIGN 18 } { source2 SIGN 18 } } } \
+  -pre_assign { O0 = { snps_ADD_252.out.1 ANY 18 } } \
+  -post_resource { { 17 } snps_ADD_253 = ADD { { source0 SIGN 17 } { source1 SIGN 17 } } } \
+  -post_resource { { 18 } snps_ADD_254 = ADD { { source2 SIGN 18 } { snps_ADD_253.out.1 SIGN 18 } } } \
+  -post_assign { O0 = { snps_ADD_254.out.1 ANY 18 } } 
+
+## Operation Id: 103
+guide_merge \
+  -design { PE } \
+  -datapath { RS_OP_250_54632_65499_J1 } \
+  -type { svfMergeRSOP } \
+  -input { 1 PI_0 } \
+  -input { 16 PI_1 } \
+  -input { 1 PI_2 } \
+  -input { 16 PI_3 } \
+  -input { 8 PI_4 } \
+  -input { 16 PI_5 } \
+  -input { 8 PI_6 } \
+  -input { 16 PI_7 } \
+  -input { 8 PI_8 } \
+  -input { 16 PI_9 } \
+  -output { 32 PO_0 } \
+  -pre_resource { { 16 } snps_SELECT_221 = SELECT { { PI_0 } { PI_2 } { PI_1 ANY 16 } { PI_3 ANY 16 } } } \
+  -pre_resource { { 16 } snps_SELECT_222 = SELECT { { PI_0 } { PI_2 } { PI_4 SIGN 16 } { PI_5 ANY 16 } } } \
+  -pre_resource { { 16 } snps_SELECT_223 = SELECT { { PI_0 } { PI_2 } { PI_6 SIGN 16 } { PI_7 ANY 16 } } } \
+  -pre_resource { { 16 } snps_SELECT_224 = SELECT { { PI_0 } { PI_2 } { PI_8 SIGN 16 } { PI_9 ANY 16 } } } \
+  -pre_resource { { 32 } snps_SELECT_226 = SELECT { { PI_0 } { PI_2 } { snps_ADD_254.out.1 10 0 SIGN 32 } { snps_ADD_254.out.1 SIGN 32 } } } \
+  -pre_resource { { 17 } snps_ADD_251 = ADD { { snps_SELECT_221.out.1 SIGN 17 } { snps_SELECT_222.out.1 SIGN 17 } } } \
+  -pre_resource { { 17 } snps_ADD_253 = ADD { { snps_SELECT_223.out.1 SIGN 17 } { snps_SELECT_224.out.1 SIGN 17 } } } \
+  -pre_resource { { 18 } snps_ADD_254 = ADD { { snps_ADD_251.out.1 SIGN 18 } { snps_ADD_253.out.1 SIGN 18 } } } \
+  -pre_assign { PO_0 = { snps_SELECT_226.out.1 ANY 32 } } 
+
+## Operation Id: 104
+guide_instance_map \
+  -design { PE } \
+  -instance { RS_OP_250_54632_65499_J1 } \
+  -linked { RS_OP_250_54632_65499_J1 } 
+
+## Operation Id: 105
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DW_mult_tc_J3_H0_D1.a.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 106
+guide_multiplier \
+  -design { PE } \
+  -instance { u_mac_and_scale/mult_2/mult_01/mult_12 } \
+  -arch { pparch } \
+  -body { DW_mult_tc_J3_H0_D1 } 
+
+## Operation Id: 107
+guide_ungroup \
+  -cells { u_mac_and_scale/mult_2/mult_01/mult_12 } \
+  -design { PE } 
+
+## Operation Id: 108
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DW_mult_tc_J3_H1_D1.a.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 109
+guide_multiplier \
+  -design { PE } \
+  -instance { u_mac_and_scale/mult_3/mult_01/mult_12 } \
+  -arch { pparch } \
+  -body { DW_mult_tc_J3_H1_D1 } 
+
+## Operation Id: 110
+guide_ungroup \
+  -cells { u_mac_and_scale/mult_3/mult_01/mult_12 } \
+  -design { PE } 
+
+## Operation Id: 111
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DW_mult_tc_J3_H3_D1.a.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 112
+guide_multiplier \
+  -design { PE } \
+  -instance { u_mac_and_scale/mult_1/mult_01/mult_12 } \
+  -arch { pparch } \
+  -body { DW_mult_tc_J3_H3_D1 } 
+
+## Operation Id: 113
+guide_ungroup \
+  -cells { u_mac_and_scale/mult_1/mult_01/mult_12 } \
+  -design { PE } 
+
+## Operation Id: 114
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DW_mult_tc_J3_H4_D1.a.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 115
+guide_multiplier \
+  -design { PE } \
+  -instance { u_mac_and_scale/mult_0/mult_01/mult_12 } \
+  -arch { pparch } \
+  -body { DW_mult_tc_J3_H4_D1 } 
+
+## Operation Id: 116
+guide_ungroup \
+  -cells { u_mac_and_scale/mult_0/mult_01/mult_12 } \
+  -design { PE } 
+
+## Operation Id: 117
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DW_mult_tc_J3_H5_D1.a.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 118
+guide_multiplier \
+  -design { PE } \
+  -instance { u_mac_and_scale/mult_0/mult_10/mult_12 } \
+  -arch { pparch } \
+  -body { DW_mult_tc_J3_H5_D1 } 
+
+## Operation Id: 119
+guide_ungroup \
+  -cells { u_mac_and_scale/mult_0/mult_10/mult_12 } \
+  -design { PE } 
+
+## Operation Id: 120
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DW_mult_tc_J3_H6_D1.a.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 121
+guide_multiplier \
+  -design { PE } \
+  -instance { u_mac_and_scale/mult_0/mult_11/mult_12 } \
+  -arch { pparch } \
+  -body { DW_mult_tc_J3_H6_D1 } 
+
+## Operation Id: 122
+guide_ungroup \
+  -cells { u_mac_and_scale/mult_0/mult_11/mult_12 } \
+  -design { PE } 
+
+## Operation Id: 123
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DW_mult_tc_J3_H7_D1.a.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 124
+guide_multiplier \
+  -design { PE } \
+  -instance { u_mac_and_scale/mult_0/mult_00/mult_12 } \
+  -arch { pparch } \
+  -body { DW_mult_tc_J3_H7_D1 } 
+
+## Operation Id: 125
+guide_ungroup \
+  -cells { u_mac_and_scale/mult_0/mult_00/mult_12 } \
+  -design { PE } 
+
+## Operation Id: 126
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DW_mult_tc_J3_H8_D1.a.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 127
+guide_multiplier \
+  -design { PE } \
+  -instance { u_mac_and_scale/mult_1/mult_10/mult_12 } \
+  -arch { pparch } \
+  -body { DW_mult_tc_J3_H8_D1 } 
+
+## Operation Id: 128
+guide_ungroup \
+  -cells { u_mac_and_scale/mult_1/mult_10/mult_12 } \
+  -design { PE } 
+
+## Operation Id: 129
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DW_mult_tc_J3_H9_D1.a.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 130
+guide_multiplier \
+  -design { PE } \
+  -instance { u_mac_and_scale/mult_1/mult_11/mult_12 } \
+  -arch { pparch } \
+  -body { DW_mult_tc_J3_H9_D1 } 
+
+## Operation Id: 131
+guide_ungroup \
+  -cells { u_mac_and_scale/mult_1/mult_11/mult_12 } \
+  -design { PE } 
+
+## Operation Id: 132
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DW_mult_tc_J3_H10_D1.a.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 133
+guide_multiplier \
+  -design { PE } \
+  -instance { u_mac_and_scale/mult_1/mult_00/mult_12 } \
+  -arch { pparch } \
+  -body { DW_mult_tc_J3_H10_D1 } 
+
+## Operation Id: 134
+guide_ungroup \
+  -cells { u_mac_and_scale/mult_1/mult_00/mult_12 } \
+  -design { PE } 
+
+## Operation Id: 135
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DW_mult_tc_J3_H11_D1.a.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 136
+guide_multiplier \
+  -design { PE } \
+  -instance { u_mac_and_scale/mult_2/mult_10/mult_12 } \
+  -arch { pparch } \
+  -body { DW_mult_tc_J3_H11_D1 } 
+
+## Operation Id: 137
+guide_ungroup \
+  -cells { u_mac_and_scale/mult_2/mult_10/mult_12 } \
+  -design { PE } 
+
+## Operation Id: 138
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DW_mult_tc_J3_H12_D1.a.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 139
+guide_multiplier \
+  -design { PE } \
+  -instance { u_mac_and_scale/mult_2/mult_11/mult_12 } \
+  -arch { pparch } \
+  -body { DW_mult_tc_J3_H12_D1 } 
+
+## Operation Id: 140
+guide_ungroup \
+  -cells { u_mac_and_scale/mult_2/mult_11/mult_12 } \
+  -design { PE } 
+
+## Operation Id: 141
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DW_mult_tc_J3_H13_D1.a.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 142
+guide_multiplier \
+  -design { PE } \
+  -instance { u_mac_and_scale/mult_2/mult_00/mult_12 } \
+  -arch { pparch } \
+  -body { DW_mult_tc_J3_H13_D1 } 
+
+## Operation Id: 143
+guide_ungroup \
+  -cells { u_mac_and_scale/mult_2/mult_00/mult_12 } \
+  -design { PE } 
+
+## Operation Id: 144
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DW_mult_tc_J3_H14_D1.a.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 145
+guide_multiplier \
+  -design { PE } \
+  -instance { u_mac_and_scale/mult_3/mult_10/mult_12 } \
+  -arch { pparch } \
+  -body { DW_mult_tc_J3_H14_D1 } 
+
+## Operation Id: 146
+guide_ungroup \
+  -cells { u_mac_and_scale/mult_3/mult_10/mult_12 } \
+  -design { PE } 
+
+## Operation Id: 147
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DW_mult_tc_J3_H15_D1.a.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 148
+guide_multiplier \
+  -design { PE } \
+  -instance { u_mac_and_scale/mult_3/mult_11/mult_12 } \
+  -arch { pparch } \
+  -body { DW_mult_tc_J3_H15_D1 } 
+
+## Operation Id: 149
+guide_ungroup \
+  -cells { u_mac_and_scale/mult_3/mult_11/mult_12 } \
+  -design { PE } 
+
+## Operation Id: 150
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DW_mult_tc_J3_H16_D1.a.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 151
+guide_multiplier \
+  -design { PE } \
+  -instance { u_mac_and_scale/mult_3/mult_00/mult_12 } \
+  -arch { pparch } \
+  -body { DW_mult_tc_J3_H16_D1 } 
+
+## Operation Id: 152
+guide_ungroup \
+  -cells { u_mac_and_scale/mult_3/mult_00/mult_12 } \
+  -design { PE } 
+
+## Operation Id: 153
+guide_ungroup \
+  -cells { u_ppu/u_requantizer/sra_23 } \
+  -design { PE } 
+
+## Operation Id: 154
+guide_ungroup \
+  -cells { u_ppu/u_requantizer/sra_24 } \
+  -design { PE } 
+
+## Operation Id: 155
+guide_ungroup \
+  -cells { u_ppu/u_requantizer/add_28_round } \
+  -design { PE } 
+
+## Operation Id: 156
+guide_boundary_netlist \
+  -file { d1/netlists/dw-1/DP_OP_244_18871_65499_J3_H20_D0.b.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 157
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DP_OP_244_18871_65499_J3_H20_D0.b.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 158
+guide_replace \
+  -origin { Gensh } \
+  -body { DP_OP_244_18871_65499_J3_H20_D0 } \
+  -input { 24 PI_0 } \
+  -input { 40 PI_1 } \
+  -input { 1 PI_2 } \
+  -input { 1 PI_3 } \
+  -input { 8 PI_4 } \
+  -input { 13 PI_5 } \
+  -input { 13 PI_6 } \
+  -input { 16 PI_7 } \
+  -output { 40 PO_0 } \
+  -output { 16 PO_1 } \
+  -pre_resource { { 24 } ADD_15 = ADD { { PI_0 ZERO 24 } { SBX_110.out.1 ZERO 24 } } } \
+  -pre_resource { { 40 } ADD_17 = ADD { { PI_1 ANY 40 } { SBX_112.out.1 ANY 40 } } } \
+  -pre_resource { { 16 } SELECT_41 = SELECT { { PI_2 } { PI_3 } { ADD_207.out.1 ZERO 16 } { U`b0000000000000000 } } } \
+  -pre_resource { { 24 } SBX_110 = CONCAT { { SELECT_41.out.1 ANY 16 } { U`b00000000 } } } \
+  -pre_resource { { 40 } SBX_112 = CONCAT { { ADD_15.out.1 ANY 24 } { U`b0000000000000000 } } } \
+  -pre_resource { { 16 } ADD_207 = MADD { { PI_4 ZERO 16 } { PI_5 SIGN 16 } { PI_6 SIGN 16 } { PI_7 ZERO 16 } } } \
+  -pre_assign { PO_0 = { ADD_17.out.1 ANY 40 } } \
+  -pre_assign { PO_1 = { ADD_207.out.1 ANY 16 } } \
+  -post_resource { { 16 } SELECT_41 cs2 = SELECT { { PI_2 } { PI_3 } { SUBGRAPH_217.out.1 ZERO 16 } { U`b0000000000000000 } } } \
+  -post_resource { { 24 } ASH_209 cs2 = SHIFT { { SELECT_41.out.1 ZERO 24 } { U`b1000 } { U`b0 } { U`b0 } { U`b1 } { U`b0 } } } \
+  -post_resource { { 40 } SUBGRAPH_210 = SOP { { { PI_1 ZERO 40 } } { { PI_0 ZERO 40 } { offset 16 } } { { ASH_209.out.1 ZERO 40 } { offset 16 } } } } \
+  -post_resource { { 16 } ADD_213 = REDUCE { { SUBGRAPH_217.out.1 ANY 16 } } } \
+  -post_resource { { 16 } SUBGRAPH_217 cs2 = SOP { { { PI_4 ZERO 16 } } { { PI_5 SIGN 16 } } { { PI_6 SIGN 16 } } { { PI_7 ZERO 16 } } } } \
+  -post_assign { PO_0 = { SUBGRAPH_210.out.1 ANY 40 } } \
+  -post_assign { PO_1 = { ADD_213.out.1 ANY 16 } } 
+
+## Operation Id: 159
+guide_boundary \
+  -body { DP_OP_244_18871_65499_J3_H20_D0 } \
+  -operand { PI_0 bin 24 } \
+  -column { PI_0 0 { PI_0[0] } } \
+  -column { PI_0 1 { PI_0[1] } } \
+  -column { PI_0 2 { PI_0[2] } } \
+  -column { PI_0 3 { PI_0[3] } } \
+  -column { PI_0 4 { PI_0[4] } } \
+  -column { PI_0 5 { PI_0[5] } } \
+  -column { PI_0 6 { PI_0[6] } } \
+  -column { PI_0 7 { PI_0[7] } } \
+  -column { PI_0 8 { PI_0[8] } } \
+  -column { PI_0 9 { PI_0[9] } } \
+  -column { PI_0 10 { PI_0[10] } } \
+  -column { PI_0 11 { PI_0[11] } } \
+  -column { PI_0 12 { PI_0[12] } } \
+  -column { PI_0 13 { PI_0[13] } } \
+  -column { PI_0 14 { PI_0[14] } } \
+  -column { PI_0 15 { PI_0[15] } } \
+  -column { PI_0 16 { PI_0[16] } } \
+  -column { PI_0 17 { PI_0[17] } } \
+  -column { PI_0 18 { PI_0[18] } } \
+  -column { PI_0 19 { PI_0[19] } } \
+  -column { PI_0 20 { PI_0[20] } } \
+  -column { PI_0 21 { PI_0[21] } } \
+  -column { PI_0 22 { PI_0[22] } } \
+  -column { PI_0 23 { PI_0[23] } } \
+  -operand { PI_1 bin 40 } \
+  -column { PI_1 0 { PI_1[0] } } \
+  -column { PI_1 1 { PI_1[1] } } \
+  -column { PI_1 2 { PI_1[2] } } \
+  -column { PI_1 3 { PI_1[3] } } \
+  -column { PI_1 4 { PI_1[4] } } \
+  -column { PI_1 5 { PI_1[5] } } \
+  -column { PI_1 6 { PI_1[6] } } \
+  -column { PI_1 7 { PI_1[7] } } \
+  -column { PI_1 8 { PI_1[8] } } \
+  -column { PI_1 9 { PI_1[9] } } \
+  -column { PI_1 10 { PI_1[10] } } \
+  -column { PI_1 11 { PI_1[11] } } \
+  -column { PI_1 12 { PI_1[12] } } \
+  -column { PI_1 13 { PI_1[13] } } \
+  -column { PI_1 14 { PI_1[14] } } \
+  -column { PI_1 15 { PI_1[15] } } \
+  -column { PI_1 16 { PI_1[16] } } \
+  -column { PI_1 17 { PI_1[17] } } \
+  -column { PI_1 18 { PI_1[18] } } \
+  -column { PI_1 19 { PI_1[19] } } \
+  -column { PI_1 20 { PI_1[20] } } \
+  -column { PI_1 21 { PI_1[21] } } \
+  -column { PI_1 22 { PI_1[22] } } \
+  -column { PI_1 23 { PI_1[23] } } \
+  -column { PI_1 24 { PI_1[24] } } \
+  -column { PI_1 25 { PI_1[25] } } \
+  -column { PI_1 26 { PI_1[26] } } \
+  -column { PI_1 27 { PI_1[27] } } \
+  -column { PI_1 28 { PI_1[28] } } \
+  -column { PI_1 29 { PI_1[29] } } \
+  -column { PI_1 30 { PI_1[30] } } \
+  -column { PI_1 31 { PI_1[31] } } \
+  -column { PI_1 32 { PI_1[32] } } \
+  -column { PI_1 33 { PI_1[33] } } \
+  -column { PI_1 34 { PI_1[34] } } \
+  -column { PI_1 35 { PI_1[35] } } \
+  -column { PI_1 36 { PI_1[36] } } \
+  -column { PI_1 37 { PI_1[37] } } \
+  -column { PI_1 38 { PI_1[38] } } \
+  -column { PI_1 39 { PI_1[39] } } \
+  -operand { PI_2 bin 1 } \
+  -column { PI_2 0 { PI_2 } } \
+  -operand { PI_3 bin 1 } \
+  -column { PI_3 0 { PI_3 } } \
+  -operand { PI_4 bin 8 } \
+  -column { PI_4 0 { PI_4[0] } } \
+  -column { PI_4 1 { PI_4[1] } } \
+  -column { PI_4 2 { PI_4[2] } } \
+  -column { PI_4 3 { PI_4[3] } } \
+  -column { PI_4 4 { PI_4[4] } } \
+  -column { PI_4 5 { PI_4[5] } } \
+  -column { PI_4 6 { PI_4[6] } } \
+  -column { PI_4 7 { PI_4[7] } } \
+  -operand { PI_5 bin 13 } \
+  -column { PI_5 0 { 0 } } \
+  -column { PI_5 1 { 0 } } \
+  -column { PI_5 2 { 0 } } \
+  -column { PI_5 3 { 0 } } \
+  -column { PI_5 4 { PI_5[4] } } \
+  -column { PI_5 5 { PI_5[5] } } \
+  -column { PI_5 6 { PI_5[6] } } \
+  -column { PI_5 7 { PI_5[7] } } \
+  -column { PI_5 8 { PI_5[8] } } \
+  -column { PI_5 9 { PI_5[9] } } \
+  -column { PI_5 10 { PI_5[10] } } \
+  -column { PI_5 11 { PI_5[11] } } \
+  -column { PI_5 12 { PI_5[12] } } \
+  -operand { PI_6 bin 13 } \
+  -column { PI_6 0 { 0 } } \
+  -column { PI_6 1 { 0 } } \
+  -column { PI_6 2 { 0 } } \
+  -column { PI_6 3 { 0 } } \
+  -column { PI_6 4 { PI_6[4] } } \
+  -column { PI_6 5 { PI_6[5] } } \
+  -column { PI_6 6 { PI_6[6] } } \
+  -column { PI_6 7 { PI_6[7] } } \
+  -column { PI_6 8 { PI_6[8] } } \
+  -column { PI_6 9 { PI_6[9] } } \
+  -column { PI_6 10 { PI_6[10] } } \
+  -column { PI_6 11 { PI_6[11] } } \
+  -column { PI_6 12 { PI_6[12] } } \
+  -operand { PI_7 bin 16 } \
+  -column { PI_7 0 { 0 } } \
+  -column { PI_7 1 { 0 } } \
+  -column { PI_7 2 { 0 } } \
+  -column { PI_7 3 { 0 } } \
+  -column { PI_7 4 { 0 } } \
+  -column { PI_7 5 { 0 } } \
+  -column { PI_7 6 { 0 } } \
+  -column { PI_7 7 { 0 } } \
+  -column { PI_7 8 { PI_7[8] } } \
+  -column { PI_7 9 { PI_7[9] } } \
+  -column { PI_7 10 { PI_7[10] } } \
+  -column { PI_7 11 { PI_7[11] } } \
+  -column { PI_7 12 { PI_7[12] } } \
+  -column { PI_7 13 { PI_7[13] } } \
+  -column { PI_7 14 { PI_7[14] } } \
+  -column { PI_7 15 { PI_7[15] } } \
+  -operand { SELECT_41.out.1 cs2 16 } \
+  -column { SELECT_41.out.1 0 { N_86 } } \
+  -column { SELECT_41.out.1 1 { N_87 } } \
+  -column { SELECT_41.out.1 2 { N_88 } } \
+  -column { SELECT_41.out.1 3 { N_89 } } \
+  -column { SELECT_41.out.1 4 { N_90 N_91 } } \
+  -column { SELECT_41.out.1 5 { N_92 N_93 } } \
+  -column { SELECT_41.out.1 6 { N_94 N_95 } } \
+  -column { SELECT_41.out.1 7 { N_96 N_97 } } \
+  -column { SELECT_41.out.1 8 { N_98 N_99 } } \
+  -column { SELECT_41.out.1 9 { N_100 N_101 } } \
+  -column { SELECT_41.out.1 10 { N_102 N_103 } } \
+  -column { SELECT_41.out.1 11 { N_104 N_105 } } \
+  -column { SELECT_41.out.1 12 { N_106 N_107 } } \
+  -column { SELECT_41.out.1 13 { N_108 N_109 } } \
+  -column { SELECT_41.out.1 14 { N_110 N_111 } } \
+  -column { SELECT_41.out.1 15 { N_112 N_113 } } \
+  -column { SELECT_41.out.1 16 { PI_2 N_114 } } \
+  -column { SELECT_41.out.1 17 { PI_2 N_115 } } \
+  -operand { ASH_209.out.1 cs2 24 } \
+  -column { ASH_209.out.1 0 { 0 0 } } \
+  -column { ASH_209.out.1 1 { 0 0 } } \
+  -column { ASH_209.out.1 2 { 0 0 } } \
+  -column { ASH_209.out.1 3 { 0 0 } } \
+  -column { ASH_209.out.1 4 { 0 0 } } \
+  -column { ASH_209.out.1 5 { 0 0 } } \
+  -column { ASH_209.out.1 6 { 0 0 } } \
+  -column { ASH_209.out.1 7 { 0 0 } } \
+  -column { ASH_209.out.1 8 { 0 N_86 } } \
+  -column { ASH_209.out.1 9 { 0 N_87 } } \
+  -column { ASH_209.out.1 10 { 0 N_88 } } \
+  -column { ASH_209.out.1 11 { 0 N_89 } } \
+  -column { ASH_209.out.1 12 { N_90 N_91 } } \
+  -column { ASH_209.out.1 13 { N_92 N_93 } } \
+  -column { ASH_209.out.1 14 { N_94 N_95 } } \
+  -column { ASH_209.out.1 15 { N_96 N_97 } } \
+  -column { ASH_209.out.1 16 { N_98 N_99 } } \
+  -column { ASH_209.out.1 17 { N_100 N_101 } } \
+  -column { ASH_209.out.1 18 { N_102 N_103 } } \
+  -column { ASH_209.out.1 19 { N_104 N_105 } } \
+  -column { ASH_209.out.1 20 { N_106 N_107 } } \
+  -column { ASH_209.out.1 21 { N_108 N_109 } } \
+  -column { ASH_209.out.1 22 { N_110 N_111 } } \
+  -column { ASH_209.out.1 23 { N_112 N_113 } } \
+  -column { ASH_209.out.1 24 { PI_2 N_114 } } \
+  -column { ASH_209.out.1 25 { PI_2 N_115 } } \
+  -operand { SUBGRAPH_210.out.1 bin 40 } \
+  -column { SUBGRAPH_210.out.1 0 { PO_0[0] } } \
+  -column { SUBGRAPH_210.out.1 1 { PO_0[1] } } \
+  -column { SUBGRAPH_210.out.1 2 { PO_0[2] } } \
+  -column { SUBGRAPH_210.out.1 3 { PO_0[3] } } \
+  -column { SUBGRAPH_210.out.1 4 { PO_0[4] } } \
+  -column { SUBGRAPH_210.out.1 5 { PO_0[5] } } \
+  -column { SUBGRAPH_210.out.1 6 { PO_0[6] } } \
+  -column { SUBGRAPH_210.out.1 7 { PO_0[7] } } \
+  -column { SUBGRAPH_210.out.1 8 { PO_0[8] } } \
+  -column { SUBGRAPH_210.out.1 9 { PO_0[9] } } \
+  -column { SUBGRAPH_210.out.1 10 { PO_0[10] } } \
+  -column { SUBGRAPH_210.out.1 11 { PO_0[11] } } \
+  -column { SUBGRAPH_210.out.1 12 { PO_0[12] } } \
+  -column { SUBGRAPH_210.out.1 13 { PO_0[13] } } \
+  -column { SUBGRAPH_210.out.1 14 { PO_0[14] } } \
+  -column { SUBGRAPH_210.out.1 15 { PO_0[15] } } \
+  -column { SUBGRAPH_210.out.1 16 { PO_0[16] } } \
+  -column { SUBGRAPH_210.out.1 17 { PO_0[17] } } \
+  -column { SUBGRAPH_210.out.1 18 { PO_0[18] } } \
+  -column { SUBGRAPH_210.out.1 19 { PO_0[19] } } \
+  -column { SUBGRAPH_210.out.1 20 { PO_0[20] } } \
+  -column { SUBGRAPH_210.out.1 21 { PO_0[21] } } \
+  -column { SUBGRAPH_210.out.1 22 { PO_0[22] } } \
+  -column { SUBGRAPH_210.out.1 23 { PO_0[23] } } \
+  -column { SUBGRAPH_210.out.1 24 { PO_0[24] } } \
+  -column { SUBGRAPH_210.out.1 25 { PO_0[25] } } \
+  -column { SUBGRAPH_210.out.1 26 { PO_0[26] } } \
+  -column { SUBGRAPH_210.out.1 27 { PO_0[27] } } \
+  -column { SUBGRAPH_210.out.1 28 { PO_0[28] } } \
+  -column { SUBGRAPH_210.out.1 29 { PO_0[29] } } \
+  -column { SUBGRAPH_210.out.1 30 { PO_0[30] } } \
+  -column { SUBGRAPH_210.out.1 31 { PO_0[31] } } \
+  -column { SUBGRAPH_210.out.1 32 { PO_0[32] } } \
+  -column { SUBGRAPH_210.out.1 33 { PO_0[33] } } \
+  -column { SUBGRAPH_210.out.1 34 { PO_0[34] } } \
+  -column { SUBGRAPH_210.out.1 35 { PO_0[35] } } \
+  -column { SUBGRAPH_210.out.1 36 { PO_0[36] } } \
+  -column { SUBGRAPH_210.out.1 37 { PO_0[37] } } \
+  -column { SUBGRAPH_210.out.1 38 { PO_0[38] } } \
+  -column { SUBGRAPH_210.out.1 39 { PO_0[39] } } \
+  -operand { ADD_213.out.1 bin 16 } \
+  -column { ADD_213.out.1 0 { PO_1[0] } } \
+  -column { ADD_213.out.1 1 { PO_1[1] } } \
+  -column { ADD_213.out.1 2 { PO_1[2] } } \
+  -column { ADD_213.out.1 3 { PO_1[3] } } \
+  -column { ADD_213.out.1 4 { PO_1[4] } } \
+  -column { ADD_213.out.1 5 { PO_1[5] } } \
+  -column { ADD_213.out.1 6 { PO_1[6] } } \
+  -column { ADD_213.out.1 7 { PO_1[7] } } \
+  -column { ADD_213.out.1 8 { PO_1[8] } } \
+  -column { ADD_213.out.1 9 { PO_1[9] } } \
+  -column { ADD_213.out.1 10 { PO_1[10] } } \
+  -column { ADD_213.out.1 11 { PO_1[11] } } \
+  -column { ADD_213.out.1 12 { PO_1[12] } } \
+  -column { ADD_213.out.1 13 { PO_1[13] } } \
+  -column { ADD_213.out.1 14 { PO_1[14] } } \
+  -column { ADD_213.out.1 15 { PO_1[15] } } \
+  -operand { SUBGRAPH_217.out.1 cs2 16 } \
+  -column { SUBGRAPH_217.out.1 0 { PO_1[0] } } \
+  -column { SUBGRAPH_217.out.1 1 { PO_1[1] } } \
+  -column { SUBGRAPH_217.out.1 2 { PO_1[2] } } \
+  -column { SUBGRAPH_217.out.1 3 { PO_1[3] } } \
+  -column { SUBGRAPH_217.out.1 4 { PI_6[4] N_31 } } \
+  -column { SUBGRAPH_217.out.1 5 { N_32 N_33 } } \
+  -column { SUBGRAPH_217.out.1 6 { N_34 N_35 } } \
+  -column { SUBGRAPH_217.out.1 7 { N_36 N_37 } } \
+  -column { SUBGRAPH_217.out.1 8 { N_38 N_39 } } \
+  -column { SUBGRAPH_217.out.1 9 { N_40 N_41 } } \
+  -column { SUBGRAPH_217.out.1 10 { N_42 N_43 } } \
+  -column { SUBGRAPH_217.out.1 11 { N_44 N_45 } } \
+  -column { SUBGRAPH_217.out.1 12 { N_46 N_47 } } \
+  -column { SUBGRAPH_217.out.1 13 { N_49 N_48 } } \
+  -column { SUBGRAPH_217.out.1 14 { PI_7[13] N_50 } } \
+  -column { SUBGRAPH_217.out.1 15 { PI_7[14] N_51 } } \
+  -column { SUBGRAPH_217.out.1 16 { 1 PI_7[15] } } \
+  -resource { SELECT_41 \
+     { PI_2 SUBGRAPH_217.out.1 PI_3 } \
+     { SELECT_41.out.1 } } \
+  -resource { ASH_209 \
+     { SELECT_41.out.1 } \
+     { ASH_209.out.1 } } \
+  -resource { SUBGRAPH_210 \
+     { PI_0 ASH_209.out.1 PI_1 } \
+     { SUBGRAPH_210.out.1 } } \
+  -resource { ADD_213 \
+     { SUBGRAPH_217.out.1 } \
+     { ADD_213.out.1 } } \
+  -resource { SUBGRAPH_217 \
+     { PI_4 PI_5 PI_6 PI_7 } \
+     { SUBGRAPH_217.out.1 } } 
+
+## Operation Id: 160
+guide_constraints \
+  -body { DP_OP_244_18871_65499_J3_H20_D0 } \
+  -const0 { \
+    PI_5[0] \
+    PI_5[1] \
+    PI_5[2] \
+    PI_5[3] \
+    PI_6[0] \
+    PI_6[1] \
+    PI_6[2] \
+    PI_6[3] \
+    PI_7[0] \
+    PI_7[1] \
+    PI_7[2] \
+    PI_7[3] \
+    PI_7[4] \
+    PI_7[5] \
+    PI_7[6] \
+    PI_7[7] \
+  } 
+
+## Operation Id: 161
+guide_datapath \
+  -design { PE } \
+  -datapath { DP_OP_244_18871_65499_J1 } \
+  -body { DP_OP_244_18871_65499_J3_H20_D0 } 
+
+## Operation Id: 162
+guide_boundary_netlist \
+  -file { d1/netlists/dw-1/DP_OP_245_33587_65499_J3_H21_D0.b.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 163
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DP_OP_245_33587_65499_J3_H21_D0.b.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 164
+guide_replace \
+  -origin { Gensh } \
+  -body { DP_OP_245_33587_65499_J3_H21_D0 } \
+  -input { 24 PI_0 } \
+  -input { 1 PI_1 } \
+  -input { 1 PI_2 } \
+  -input { 8 PI_3 } \
+  -input { 13 PI_4 } \
+  -input { 13 PI_5 } \
+  -input { 16 PI_6 } \
+  -output { 24 PO_0 } \
+  -output { 16 PO_1 } \
+  -pre_resource { { 24 } ADD_14 = ADD { { PI_0 ANY 24 } { SBX_108.out.1 ANY 24 } } } \
+  -pre_resource { { 16 } SELECT_39 = SELECT { { PI_1 } { PI_2 } { ADD_212.out.1 ZERO 16 } { U`b0000000000000000 } } } \
+  -pre_resource { { 24 } SBX_108 = CONCAT { { SELECT_39.out.1 ANY 16 } { U`b00000000 } } } \
+  -pre_resource { { 16 } ADD_212 = MADD { { PI_3 ZERO 16 } { PI_4 SIGN 16 } { PI_5 SIGN 16 } { PI_6 ZERO 16 } } } \
+  -pre_assign { PO_0 = { ADD_14.out.1 ANY 24 } } \
+  -pre_assign { PO_1 = { ADD_212.out.1 ANY 16 } } \
+  -post_resource { { 24 } ADD_14 = ADD { { PI_0 ANY 24 } { ASH_213.out.1 ANY 24 } } } \
+  -post_resource { { 16 } SELECT_39 cs2 = SELECT { { PI_1 } { PI_2 } { SUBGRAPH_218.out.1 ZERO 16 } { U`b0000000000000000 } } } \
+  -post_resource { { 24 } ASH_213 cs2 = SHIFT { { SELECT_39.out.1 ZERO 24 } { U`b1000 } { U`b0 } { U`b0 } { U`b1 } { U`b0 } } } \
+  -post_resource { { 16 } ADD_214 = REDUCE { { SUBGRAPH_218.out.1 ANY 16 } } } \
+  -post_resource { { 16 } SUBGRAPH_218 cs2 = SOP { { { PI_3 ZERO 16 } } { { PI_4 SIGN 16 } } { { PI_5 SIGN 16 } } { { PI_6 ZERO 16 } } } } \
+  -post_assign { PO_0 = { ADD_14.out.1 ANY 24 } } \
+  -post_assign { PO_1 = { ADD_214.out.1 ANY 16 } } 
+
+## Operation Id: 165
+guide_boundary \
+  -body { DP_OP_245_33587_65499_J3_H21_D0 } \
+  -operand { PI_0 bin 24 } \
+  -column { PI_0 0 { PI_0[0] } } \
+  -column { PI_0 1 { PI_0[1] } } \
+  -column { PI_0 2 { PI_0[2] } } \
+  -column { PI_0 3 { PI_0[3] } } \
+  -column { PI_0 4 { PI_0[4] } } \
+  -column { PI_0 5 { PI_0[5] } } \
+  -column { PI_0 6 { PI_0[6] } } \
+  -column { PI_0 7 { PI_0[7] } } \
+  -column { PI_0 8 { PI_0[8] } } \
+  -column { PI_0 9 { PI_0[9] } } \
+  -column { PI_0 10 { PI_0[10] } } \
+  -column { PI_0 11 { PI_0[11] } } \
+  -column { PI_0 12 { PI_0[12] } } \
+  -column { PI_0 13 { PI_0[13] } } \
+  -column { PI_0 14 { PI_0[14] } } \
+  -column { PI_0 15 { PI_0[15] } } \
+  -column { PI_0 16 { PI_0[16] } } \
+  -column { PI_0 17 { PI_0[17] } } \
+  -column { PI_0 18 { PI_0[18] } } \
+  -column { PI_0 19 { PI_0[19] } } \
+  -column { PI_0 20 { PI_0[20] } } \
+  -column { PI_0 21 { PI_0[21] } } \
+  -column { PI_0 22 { PI_0[22] } } \
+  -column { PI_0 23 { PI_0[23] } } \
+  -operand { PI_1 bin 1 } \
+  -column { PI_1 0 { PI_1 } } \
+  -operand { PI_2 bin 1 } \
+  -column { PI_2 0 { PI_2 } } \
+  -operand { PI_3 bin 8 } \
+  -column { PI_3 0 { PI_3[0] } } \
+  -column { PI_3 1 { PI_3[1] } } \
+  -column { PI_3 2 { PI_3[2] } } \
+  -column { PI_3 3 { PI_3[3] } } \
+  -column { PI_3 4 { PI_3[4] } } \
+  -column { PI_3 5 { PI_3[5] } } \
+  -column { PI_3 6 { PI_3[6] } } \
+  -column { PI_3 7 { PI_3[7] } } \
+  -operand { PI_4 bin 13 } \
+  -column { PI_4 0 { 0 } } \
+  -column { PI_4 1 { 0 } } \
+  -column { PI_4 2 { 0 } } \
+  -column { PI_4 3 { 0 } } \
+  -column { PI_4 4 { PI_4[4] } } \
+  -column { PI_4 5 { PI_4[5] } } \
+  -column { PI_4 6 { PI_4[6] } } \
+  -column { PI_4 7 { PI_4[7] } } \
+  -column { PI_4 8 { PI_4[8] } } \
+  -column { PI_4 9 { PI_4[9] } } \
+  -column { PI_4 10 { PI_4[10] } } \
+  -column { PI_4 11 { PI_4[11] } } \
+  -column { PI_4 12 { PI_4[12] } } \
+  -operand { PI_5 bin 13 } \
+  -column { PI_5 0 { 0 } } \
+  -column { PI_5 1 { 0 } } \
+  -column { PI_5 2 { 0 } } \
+  -column { PI_5 3 { 0 } } \
+  -column { PI_5 4 { PI_5[4] } } \
+  -column { PI_5 5 { PI_5[5] } } \
+  -column { PI_5 6 { PI_5[6] } } \
+  -column { PI_5 7 { PI_5[7] } } \
+  -column { PI_5 8 { PI_5[8] } } \
+  -column { PI_5 9 { PI_5[9] } } \
+  -column { PI_5 10 { PI_5[10] } } \
+  -column { PI_5 11 { PI_5[11] } } \
+  -column { PI_5 12 { PI_5[12] } } \
+  -operand { PI_6 bin 16 } \
+  -column { PI_6 0 { 0 } } \
+  -column { PI_6 1 { 0 } } \
+  -column { PI_6 2 { 0 } } \
+  -column { PI_6 3 { 0 } } \
+  -column { PI_6 4 { 0 } } \
+  -column { PI_6 5 { 0 } } \
+  -column { PI_6 6 { 0 } } \
+  -column { PI_6 7 { 0 } } \
+  -column { PI_6 8 { PI_6[8] } } \
+  -column { PI_6 9 { PI_6[9] } } \
+  -column { PI_6 10 { PI_6[10] } } \
+  -column { PI_6 11 { PI_6[11] } } \
+  -column { PI_6 12 { PI_6[12] } } \
+  -column { PI_6 13 { PI_6[13] } } \
+  -column { PI_6 14 { PI_6[14] } } \
+  -column { PI_6 15 { PI_6[15] } } \
+  -operand { ADD_14.out.1 bin 24 } \
+  -column { ADD_14.out.1 0 { PO_0[0] } } \
+  -column { ADD_14.out.1 1 { PO_0[1] } } \
+  -column { ADD_14.out.1 2 { PO_0[2] } } \
+  -column { ADD_14.out.1 3 { PO_0[3] } } \
+  -column { ADD_14.out.1 4 { PO_0[4] } } \
+  -column { ADD_14.out.1 5 { PO_0[5] } } \
+  -column { ADD_14.out.1 6 { PO_0[6] } } \
+  -column { ADD_14.out.1 7 { PO_0[7] } } \
+  -column { ADD_14.out.1 8 { PO_0[8] } } \
+  -column { ADD_14.out.1 9 { PO_0[9] } } \
+  -column { ADD_14.out.1 10 { PO_0[10] } } \
+  -column { ADD_14.out.1 11 { PO_0[11] } } \
+  -column { ADD_14.out.1 12 { PO_0[12] } } \
+  -column { ADD_14.out.1 13 { PO_0[13] } } \
+  -column { ADD_14.out.1 14 { PO_0[14] } } \
+  -column { ADD_14.out.1 15 { PO_0[15] } } \
+  -column { ADD_14.out.1 16 { PO_0[16] } } \
+  -column { ADD_14.out.1 17 { PO_0[17] } } \
+  -column { ADD_14.out.1 18 { PO_0[18] } } \
+  -column { ADD_14.out.1 19 { PO_0[19] } } \
+  -column { ADD_14.out.1 20 { PO_0[20] } } \
+  -column { ADD_14.out.1 21 { PO_0[21] } } \
+  -column { ADD_14.out.1 22 { PO_0[22] } } \
+  -column { ADD_14.out.1 23 { PO_0[23] } } \
+  -operand { SELECT_39.out.1 cs2 16 } \
+  -column { SELECT_39.out.1 0 { N_86 } } \
+  -column { SELECT_39.out.1 1 { N_87 } } \
+  -column { SELECT_39.out.1 2 { N_88 } } \
+  -column { SELECT_39.out.1 3 { N_89 } } \
+  -column { SELECT_39.out.1 4 { N_90 N_91 } } \
+  -column { SELECT_39.out.1 5 { N_92 N_93 } } \
+  -column { SELECT_39.out.1 6 { N_94 N_95 } } \
+  -column { SELECT_39.out.1 7 { N_96 N_97 } } \
+  -column { SELECT_39.out.1 8 { N_98 N_99 } } \
+  -column { SELECT_39.out.1 9 { N_100 N_101 } } \
+  -column { SELECT_39.out.1 10 { N_102 N_103 } } \
+  -column { SELECT_39.out.1 11 { N_104 N_105 } } \
+  -column { SELECT_39.out.1 12 { N_106 N_107 } } \
+  -column { SELECT_39.out.1 13 { N_108 N_109 } } \
+  -column { SELECT_39.out.1 14 { N_110 N_111 } } \
+  -column { SELECT_39.out.1 15 { N_112 N_113 } } \
+  -column { SELECT_39.out.1 16 { PI_1 N_114 } } \
+  -column { SELECT_39.out.1 17 { PI_1 N_115 } } \
+  -operand { ASH_213.out.1 cs2 24 } \
+  -column { ASH_213.out.1 0 { 0 0 } } \
+  -column { ASH_213.out.1 1 { 0 0 } } \
+  -column { ASH_213.out.1 2 { 0 0 } } \
+  -column { ASH_213.out.1 3 { 0 0 } } \
+  -column { ASH_213.out.1 4 { 0 0 } } \
+  -column { ASH_213.out.1 5 { 0 0 } } \
+  -column { ASH_213.out.1 6 { 0 0 } } \
+  -column { ASH_213.out.1 7 { 0 0 } } \
+  -column { ASH_213.out.1 8 { 0 N_86 } } \
+  -column { ASH_213.out.1 9 { 0 N_87 } } \
+  -column { ASH_213.out.1 10 { 0 N_88 } } \
+  -column { ASH_213.out.1 11 { 0 N_89 } } \
+  -column { ASH_213.out.1 12 { N_90 N_91 } } \
+  -column { ASH_213.out.1 13 { N_92 N_93 } } \
+  -column { ASH_213.out.1 14 { N_94 N_95 } } \
+  -column { ASH_213.out.1 15 { N_96 N_97 } } \
+  -column { ASH_213.out.1 16 { N_98 N_99 } } \
+  -column { ASH_213.out.1 17 { N_100 N_101 } } \
+  -column { ASH_213.out.1 18 { N_102 N_103 } } \
+  -column { ASH_213.out.1 19 { N_104 N_105 } } \
+  -column { ASH_213.out.1 20 { N_106 N_107 } } \
+  -column { ASH_213.out.1 21 { N_108 N_109 } } \
+  -column { ASH_213.out.1 22 { N_110 N_111 } } \
+  -column { ASH_213.out.1 23 { N_112 N_113 } } \
+  -column { ASH_213.out.1 24 { PI_1 N_114 } } \
+  -column { ASH_213.out.1 25 { PI_1 N_115 } } \
+  -operand { ADD_214.out.1 bin 16 } \
+  -column { ADD_214.out.1 0 { PO_1[0] } } \
+  -column { ADD_214.out.1 1 { PO_1[1] } } \
+  -column { ADD_214.out.1 2 { PO_1[2] } } \
+  -column { ADD_214.out.1 3 { PO_1[3] } } \
+  -column { ADD_214.out.1 4 { PO_1[4] } } \
+  -column { ADD_214.out.1 5 { PO_1[5] } } \
+  -column { ADD_214.out.1 6 { PO_1[6] } } \
+  -column { ADD_214.out.1 7 { PO_1[7] } } \
+  -column { ADD_214.out.1 8 { PO_1[8] } } \
+  -column { ADD_214.out.1 9 { PO_1[9] } } \
+  -column { ADD_214.out.1 10 { PO_1[10] } } \
+  -column { ADD_214.out.1 11 { PO_1[11] } } \
+  -column { ADD_214.out.1 12 { PO_1[12] } } \
+  -column { ADD_214.out.1 13 { PO_1[13] } } \
+  -column { ADD_214.out.1 14 { PO_1[14] } } \
+  -column { ADD_214.out.1 15 { PO_1[15] } } \
+  -operand { SUBGRAPH_218.out.1 cs2 16 } \
+  -column { SUBGRAPH_218.out.1 0 { PO_1[0] } } \
+  -column { SUBGRAPH_218.out.1 1 { PO_1[1] } } \
+  -column { SUBGRAPH_218.out.1 2 { PO_1[2] } } \
+  -column { SUBGRAPH_218.out.1 3 { PO_1[3] } } \
+  -column { SUBGRAPH_218.out.1 4 { PI_5[4] N_31 } } \
+  -column { SUBGRAPH_218.out.1 5 { N_32 N_33 } } \
+  -column { SUBGRAPH_218.out.1 6 { N_34 N_35 } } \
+  -column { SUBGRAPH_218.out.1 7 { N_36 N_37 } } \
+  -column { SUBGRAPH_218.out.1 8 { N_38 N_39 } } \
+  -column { SUBGRAPH_218.out.1 9 { N_40 N_41 } } \
+  -column { SUBGRAPH_218.out.1 10 { N_42 N_43 } } \
+  -column { SUBGRAPH_218.out.1 11 { N_44 N_45 } } \
+  -column { SUBGRAPH_218.out.1 12 { N_46 N_47 } } \
+  -column { SUBGRAPH_218.out.1 13 { N_49 N_48 } } \
+  -column { SUBGRAPH_218.out.1 14 { PI_6[13] N_50 } } \
+  -column { SUBGRAPH_218.out.1 15 { PI_6[14] N_51 } } \
+  -column { SUBGRAPH_218.out.1 16 { 1 PI_6[15] } } \
+  -resource { ADD_14 \
+     { PI_0 ASH_213.out.1 } \
+     { ADD_14.out.1 } } \
+  -resource { SELECT_39 \
+     { PI_1 SUBGRAPH_218.out.1 PI_2 } \
+     { SELECT_39.out.1 } } \
+  -resource { ASH_213 \
+     { SELECT_39.out.1 } \
+     { ASH_213.out.1 } } \
+  -resource { ADD_214 \
+     { SUBGRAPH_218.out.1 } \
+     { ADD_214.out.1 } } \
+  -resource { SUBGRAPH_218 \
+     { PI_3 PI_4 PI_5 PI_6 } \
+     { SUBGRAPH_218.out.1 } } 
+
+## Operation Id: 166
+guide_constraints \
+  -body { DP_OP_245_33587_65499_J3_H21_D0 } \
+  -const0 { \
+    PI_4[0] \
+    PI_4[1] \
+    PI_4[2] \
+    PI_4[3] \
+    PI_5[0] \
+    PI_5[1] \
+    PI_5[2] \
+    PI_5[3] \
+    PI_6[0] \
+    PI_6[1] \
+    PI_6[2] \
+    PI_6[3] \
+    PI_6[4] \
+    PI_6[5] \
+    PI_6[6] \
+    PI_6[7] \
+  } 
+
+## Operation Id: 167
+guide_datapath \
+  -design { PE } \
+  -datapath { DP_OP_245_33587_65499_J1 } \
+  -body { DP_OP_245_33587_65499_J3_H21_D0 } 
+
+## Operation Id: 168
+guide_boundary_netlist \
+  -file { d1/netlists/dw-1/DP_OP_246_35163_65499_J3_H22_D0.b.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 169
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DP_OP_246_35163_65499_J3_H22_D0.b.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 170
+guide_replace \
+  -origin { Gensh } \
+  -body { DP_OP_246_35163_65499_J3_H22_D0 } \
+  -input { 8 PI_0 } \
+  -input { 13 PI_1 } \
+  -input { 13 PI_2 } \
+  -input { 16 PI_3 } \
+  -output { 16 PO_0 } \
+  -pre_resource { { 16 } ADD_209 = MADD { { PI_0 ZERO 16 } { PI_1 SIGN 16 } { PI_2 SIGN 16 } { PI_3 ANY 16 } } } \
+  -pre_assign { PO_0 = { ADD_209.out.1 ANY 16 } } \
+  -post_resource { { 16 } SUBGRAPH_211 = SOP { { { PI_0 ZERO 16 } } { { PI_1 SIGN 16 } } { { PI_2 SIGN 16 } } { { PI_3 ZERO 16 } } } } \
+  -post_assign { PO_0 = { SUBGRAPH_211.out.1 ANY 16 } } 
+
+## Operation Id: 171
+guide_boundary \
+  -body { DP_OP_246_35163_65499_J3_H22_D0 } \
+  -operand { PI_0 bin 8 } \
+  -column { PI_0 0 { PI_0[0] } } \
+  -column { PI_0 1 { PI_0[1] } } \
+  -column { PI_0 2 { PI_0[2] } } \
+  -column { PI_0 3 { PI_0[3] } } \
+  -column { PI_0 4 { PI_0[4] } } \
+  -column { PI_0 5 { PI_0[5] } } \
+  -column { PI_0 6 { PI_0[6] } } \
+  -column { PI_0 7 { PI_0[7] } } \
+  -operand { PI_1 bin 13 } \
+  -column { PI_1 0 { 0 } } \
+  -column { PI_1 1 { 0 } } \
+  -column { PI_1 2 { 0 } } \
+  -column { PI_1 3 { 0 } } \
+  -column { PI_1 4 { PI_1[4] } } \
+  -column { PI_1 5 { PI_1[5] } } \
+  -column { PI_1 6 { PI_1[6] } } \
+  -column { PI_1 7 { PI_1[7] } } \
+  -column { PI_1 8 { PI_1[8] } } \
+  -column { PI_1 9 { PI_1[9] } } \
+  -column { PI_1 10 { PI_1[10] } } \
+  -column { PI_1 11 { PI_1[11] } } \
+  -column { PI_1 12 { PI_1[12] } } \
+  -operand { PI_2 bin 13 } \
+  -column { PI_2 0 { 0 } } \
+  -column { PI_2 1 { 0 } } \
+  -column { PI_2 2 { 0 } } \
+  -column { PI_2 3 { 0 } } \
+  -column { PI_2 4 { PI_2[4] } } \
+  -column { PI_2 5 { PI_2[5] } } \
+  -column { PI_2 6 { PI_2[6] } } \
+  -column { PI_2 7 { PI_2[7] } } \
+  -column { PI_2 8 { PI_2[8] } } \
+  -column { PI_2 9 { PI_2[9] } } \
+  -column { PI_2 10 { PI_2[10] } } \
+  -column { PI_2 11 { PI_2[11] } } \
+  -column { PI_2 12 { PI_2[12] } } \
+  -operand { PI_3 bin 16 } \
+  -column { PI_3 0 { 0 } } \
+  -column { PI_3 1 { 0 } } \
+  -column { PI_3 2 { 0 } } \
+  -column { PI_3 3 { 0 } } \
+  -column { PI_3 4 { 0 } } \
+  -column { PI_3 5 { 0 } } \
+  -column { PI_3 6 { 0 } } \
+  -column { PI_3 7 { 0 } } \
+  -column { PI_3 8 { PI_3[8] } } \
+  -column { PI_3 9 { PI_3[9] } } \
+  -column { PI_3 10 { PI_3[10] } } \
+  -column { PI_3 11 { PI_3[11] } } \
+  -column { PI_3 12 { PI_3[12] } } \
+  -column { PI_3 13 { PI_3[13] } } \
+  -column { PI_3 14 { PI_3[14] } } \
+  -column { PI_3 15 { PI_3[15] } } \
+  -operand { SUBGRAPH_211.out.1 bin 16 } \
+  -column { SUBGRAPH_211.out.1 0 { PO_0[0] } } \
+  -column { SUBGRAPH_211.out.1 1 { PO_0[1] } } \
+  -column { SUBGRAPH_211.out.1 2 { PO_0[2] } } \
+  -column { SUBGRAPH_211.out.1 3 { PO_0[3] } } \
+  -column { SUBGRAPH_211.out.1 4 { PO_0[4] } } \
+  -column { SUBGRAPH_211.out.1 5 { PO_0[5] } } \
+  -column { SUBGRAPH_211.out.1 6 { PO_0[6] } } \
+  -column { SUBGRAPH_211.out.1 7 { PO_0[7] } } \
+  -column { SUBGRAPH_211.out.1 8 { PO_0[8] } } \
+  -column { SUBGRAPH_211.out.1 9 { PO_0[9] } } \
+  -column { SUBGRAPH_211.out.1 10 { PO_0[10] } } \
+  -column { SUBGRAPH_211.out.1 11 { PO_0[11] } } \
+  -column { SUBGRAPH_211.out.1 12 { PO_0[12] } } \
+  -column { SUBGRAPH_211.out.1 13 { PO_0[13] } } \
+  -column { SUBGRAPH_211.out.1 14 { PO_0[14] } } \
+  -column { SUBGRAPH_211.out.1 15 { PO_0[15] } } \
+  -resource { SUBGRAPH_211 \
+     { PI_0 PI_1 PI_2 PI_3 } \
+     { SUBGRAPH_211.out.1 } } 
+
+## Operation Id: 172
+guide_constraints \
+  -body { DP_OP_246_35163_65499_J3_H22_D0 } \
+  -const0 { \
+    PI_1[0] \
+    PI_1[1] \
+    PI_1[2] \
+    PI_1[3] \
+    PI_2[0] \
+    PI_2[1] \
+    PI_2[2] \
+    PI_2[3] \
+    PI_3[0] \
+    PI_3[1] \
+    PI_3[2] \
+    PI_3[3] \
+    PI_3[4] \
+    PI_3[5] \
+    PI_3[6] \
+    PI_3[7] \
+  } 
+
+## Operation Id: 173
+guide_datapath \
+  -design { PE } \
+  -datapath { DP_OP_246_35163_65499_J1 } \
+  -body { DP_OP_246_35163_65499_J3_H22_D0 } 
+
+## Operation Id: 174
+guide_boundary_netlist \
+  -file { d1/netlists/dw-1/DP_OP_247_35163_65499_J3_H23_D0.b.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 175
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DP_OP_247_35163_65499_J3_H23_D0.b.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 176
+guide_replace \
+  -origin { Gensh } \
+  -body { DP_OP_247_35163_65499_J3_H23_D0 } \
+  -input { 8 PI_0 } \
+  -input { 13 PI_1 } \
+  -input { 13 PI_2 } \
+  -input { 16 PI_3 } \
+  -output { 16 PO_0 } \
+  -pre_resource { { 16 } ADD_198 = MADD { { PI_0 ZERO 16 } { PI_1 SIGN 16 } { PI_2 SIGN 16 } { PI_3 ANY 16 } } } \
+  -pre_assign { PO_0 = { ADD_198.out.1 ANY 16 } } \
+  -post_resource { { 16 } SUBGRAPH_200 = SOP { { { PI_0 ZERO 16 } } { { PI_1 SIGN 16 } } { { PI_2 SIGN 16 } } { { PI_3 ZERO 16 } } } } \
+  -post_assign { PO_0 = { SUBGRAPH_200.out.1 ANY 16 } } 
+
+## Operation Id: 177
+guide_boundary \
+  -body { DP_OP_247_35163_65499_J3_H23_D0 } \
+  -operand { PI_0 bin 8 } \
+  -column { PI_0 0 { PI_0[0] } } \
+  -column { PI_0 1 { PI_0[1] } } \
+  -column { PI_0 2 { PI_0[2] } } \
+  -column { PI_0 3 { PI_0[3] } } \
+  -column { PI_0 4 { PI_0[4] } } \
+  -column { PI_0 5 { PI_0[5] } } \
+  -column { PI_0 6 { PI_0[6] } } \
+  -column { PI_0 7 { PI_0[7] } } \
+  -operand { PI_1 bin 13 } \
+  -column { PI_1 0 { 0 } } \
+  -column { PI_1 1 { 0 } } \
+  -column { PI_1 2 { 0 } } \
+  -column { PI_1 3 { 0 } } \
+  -column { PI_1 4 { PI_1[4] } } \
+  -column { PI_1 5 { PI_1[5] } } \
+  -column { PI_1 6 { PI_1[6] } } \
+  -column { PI_1 7 { PI_1[7] } } \
+  -column { PI_1 8 { PI_1[8] } } \
+  -column { PI_1 9 { PI_1[9] } } \
+  -column { PI_1 10 { PI_1[10] } } \
+  -column { PI_1 11 { PI_1[11] } } \
+  -column { PI_1 12 { PI_1[12] } } \
+  -operand { PI_2 bin 13 } \
+  -column { PI_2 0 { 0 } } \
+  -column { PI_2 1 { 0 } } \
+  -column { PI_2 2 { 0 } } \
+  -column { PI_2 3 { 0 } } \
+  -column { PI_2 4 { PI_2[4] } } \
+  -column { PI_2 5 { PI_2[5] } } \
+  -column { PI_2 6 { PI_2[6] } } \
+  -column { PI_2 7 { PI_2[7] } } \
+  -column { PI_2 8 { PI_2[8] } } \
+  -column { PI_2 9 { PI_2[9] } } \
+  -column { PI_2 10 { PI_2[10] } } \
+  -column { PI_2 11 { PI_2[11] } } \
+  -column { PI_2 12 { PI_2[12] } } \
+  -operand { PI_3 bin 16 } \
+  -column { PI_3 0 { 0 } } \
+  -column { PI_3 1 { 0 } } \
+  -column { PI_3 2 { 0 } } \
+  -column { PI_3 3 { 0 } } \
+  -column { PI_3 4 { 0 } } \
+  -column { PI_3 5 { 0 } } \
+  -column { PI_3 6 { 0 } } \
+  -column { PI_3 7 { 0 } } \
+  -column { PI_3 8 { PI_3[8] } } \
+  -column { PI_3 9 { PI_3[9] } } \
+  -column { PI_3 10 { PI_3[10] } } \
+  -column { PI_3 11 { PI_3[11] } } \
+  -column { PI_3 12 { PI_3[12] } } \
+  -column { PI_3 13 { PI_3[13] } } \
+  -column { PI_3 14 { PI_3[14] } } \
+  -column { PI_3 15 { PI_3[15] } } \
+  -operand { SUBGRAPH_200.out.1 bin 16 } \
+  -column { SUBGRAPH_200.out.1 0 { PO_0[0] } } \
+  -column { SUBGRAPH_200.out.1 1 { PO_0[1] } } \
+  -column { SUBGRAPH_200.out.1 2 { PO_0[2] } } \
+  -column { SUBGRAPH_200.out.1 3 { PO_0[3] } } \
+  -column { SUBGRAPH_200.out.1 4 { PO_0[4] } } \
+  -column { SUBGRAPH_200.out.1 5 { PO_0[5] } } \
+  -column { SUBGRAPH_200.out.1 6 { PO_0[6] } } \
+  -column { SUBGRAPH_200.out.1 7 { PO_0[7] } } \
+  -column { SUBGRAPH_200.out.1 8 { PO_0[8] } } \
+  -column { SUBGRAPH_200.out.1 9 { PO_0[9] } } \
+  -column { SUBGRAPH_200.out.1 10 { PO_0[10] } } \
+  -column { SUBGRAPH_200.out.1 11 { PO_0[11] } } \
+  -column { SUBGRAPH_200.out.1 12 { PO_0[12] } } \
+  -column { SUBGRAPH_200.out.1 13 { PO_0[13] } } \
+  -column { SUBGRAPH_200.out.1 14 { PO_0[14] } } \
+  -column { SUBGRAPH_200.out.1 15 { PO_0[15] } } \
+  -resource { SUBGRAPH_200 \
+     { PI_0 PI_1 PI_2 PI_3 } \
+     { SUBGRAPH_200.out.1 } } 
+
+## Operation Id: 178
+guide_constraints \
+  -body { DP_OP_247_35163_65499_J3_H23_D0 } \
+  -const0 { \
+    PI_1[0] \
+    PI_1[1] \
+    PI_1[2] \
+    PI_1[3] \
+    PI_2[0] \
+    PI_2[1] \
+    PI_2[2] \
+    PI_2[3] \
+    PI_3[0] \
+    PI_3[1] \
+    PI_3[2] \
+    PI_3[3] \
+    PI_3[4] \
+    PI_3[5] \
+    PI_3[6] \
+    PI_3[7] \
+  } 
+
+## Operation Id: 179
+guide_datapath \
+  -design { PE } \
+  -datapath { DP_OP_247_35163_65499_J1 } \
+  -body { DP_OP_247_35163_65499_J3_H23_D0 } 
+
+## Operation Id: 180
+guide_boundary_netlist \
+  -file { d1/netlists/dw-1/DP_OP_248_26668_65499_J3_H24_D0.b.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 181
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DP_OP_248_26668_65499_J3_H24_D0.b.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 182
+guide_replace \
+  -origin { Gensh } \
+  -body { DP_OP_248_26668_65499_J3_H24_D0 } \
+  -input { 8 PI_0 } \
+  -input { 8 PI_1 } \
+  -input { 8 PI_2 } \
+  -input { 8 PI_3 } \
+  -input { 8 PI_4 } \
+  -output { 11 PO_0 } \
+  -pre_resource { { 11 } ADD_230 = MADD { { PI_0 SIGN 11 } { PI_1 SIGN 11 } { PI_2 SIGN 11 } { PI_3 SIGN 11 } { PI_4 SIGN 11 } } } \
+  -pre_assign { PO_0 = { ADD_230.out.1 ANY 11 } } \
+  -post_resource { { 11 } SUBGRAPH_232 = SOP { { { PI_0 SIGN 11 } } { { PI_1 SIGN 11 } } { { PI_2 SIGN 11 } } { { PI_3 SIGN 11 } } { { PI_4 SIGN 11 } } } } \
+  -post_assign { PO_0 = { SUBGRAPH_232.out.1 ANY 11 } } 
+
+## Operation Id: 183
+guide_boundary \
+  -body { DP_OP_248_26668_65499_J3_H24_D0 } \
+  -operand { PI_0 bin 8 } \
+  -column { PI_0 0 { PI_0[0] } } \
+  -column { PI_0 1 { PI_0[1] } } \
+  -column { PI_0 2 { PI_0[2] } } \
+  -column { PI_0 3 { PI_0[3] } } \
+  -column { PI_0 4 { PI_0[4] } } \
+  -column { PI_0 5 { PI_0[5] } } \
+  -column { PI_0 6 { PI_0[6] } } \
+  -column { PI_0 7 { PI_0[7] } } \
+  -operand { PI_1 bin 8 } \
+  -column { PI_1 0 { PI_1[0] } } \
+  -column { PI_1 1 { PI_1[1] } } \
+  -column { PI_1 2 { PI_1[2] } } \
+  -column { PI_1 3 { PI_1[3] } } \
+  -column { PI_1 4 { PI_1[4] } } \
+  -column { PI_1 5 { PI_1[5] } } \
+  -column { PI_1 6 { PI_1[6] } } \
+  -column { PI_1 7 { PI_1[7] } } \
+  -operand { PI_2 bin 8 } \
+  -column { PI_2 0 { PI_2[0] } } \
+  -column { PI_2 1 { PI_2[1] } } \
+  -column { PI_2 2 { PI_2[2] } } \
+  -column { PI_2 3 { PI_2[3] } } \
+  -column { PI_2 4 { PI_2[4] } } \
+  -column { PI_2 5 { PI_2[5] } } \
+  -column { PI_2 6 { PI_2[6] } } \
+  -column { PI_2 7 { PI_2[7] } } \
+  -operand { PI_3 bin 8 } \
+  -column { PI_3 0 { PI_3[0] } } \
+  -column { PI_3 1 { PI_3[1] } } \
+  -column { PI_3 2 { PI_3[2] } } \
+  -column { PI_3 3 { PI_3[3] } } \
+  -column { PI_3 4 { PI_3[4] } } \
+  -column { PI_3 5 { PI_3[5] } } \
+  -column { PI_3 6 { PI_3[6] } } \
+  -column { PI_3 7 { PI_3[7] } } \
+  -operand { PI_4 bin 8 } \
+  -column { PI_4 0 { PI_4[0] } } \
+  -column { PI_4 1 { PI_4[1] } } \
+  -column { PI_4 2 { PI_4[2] } } \
+  -column { PI_4 3 { PI_4[3] } } \
+  -column { PI_4 4 { PI_4[4] } } \
+  -column { PI_4 5 { PI_4[5] } } \
+  -column { PI_4 6 { PI_4[6] } } \
+  -column { PI_4 7 { PI_4[7] } } \
+  -operand { SUBGRAPH_232.out.1 bin 11 } \
+  -column { SUBGRAPH_232.out.1 0 { PO_0[0] } } \
+  -column { SUBGRAPH_232.out.1 1 { PO_0[1] } } \
+  -column { SUBGRAPH_232.out.1 2 { PO_0[2] } } \
+  -column { SUBGRAPH_232.out.1 3 { PO_0[3] } } \
+  -column { SUBGRAPH_232.out.1 4 { PO_0[4] } } \
+  -column { SUBGRAPH_232.out.1 5 { PO_0[5] } } \
+  -column { SUBGRAPH_232.out.1 6 { PO_0[6] } } \
+  -column { SUBGRAPH_232.out.1 7 { PO_0[7] } } \
+  -column { SUBGRAPH_232.out.1 8 { PO_0[8] } } \
+  -column { SUBGRAPH_232.out.1 9 { PO_0[9] } } \
+  -column { SUBGRAPH_232.out.1 10 { PO_0[10] } } \
+  -resource { SUBGRAPH_232 \
+     { PI_0 PI_1 PI_2 PI_3 PI_4 } \
+     { SUBGRAPH_232.out.1 } } 
+
+## Operation Id: 184
+guide_datapath \
+  -design { PE } \
+  -datapath { DP_OP_248_26668_65499_J1 } \
+  -body { DP_OP_248_26668_65499_J3_H24_D0 } 
+
+## Operation Id: 185
+guide_boundary_netlist \
+  -file { d1/netlists/dw-1/DP_OP_249_24682_65499_J3_H25_D0.b.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 186
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DP_OP_249_24682_65499_J3_H25_D0.b.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 187
+guide_replace \
+  -origin { Gensh } \
+  -body { DP_OP_249_24682_65499_J3_H25_D0 } \
+  -input { 32 PI_0 } \
+  -input { 32 PI_1 } \
+  -input { 1 PI_2 } \
+  -output { 32 PO_0 } \
+  -pre_resource { { 32 } ADD_199 = MADD { { PI_0 ANY 32 } { PI_1 ANY 32 } { PI_2 ZERO 32 } } } \
+  -pre_assign { PO_0 = { ADD_199.out.1 ANY 32 } } \
+  -post_resource { { 32 } SUBGRAPH_201 = SOP { { { PI_0 ZERO 32 } } { { PI_1 ZERO 32 } } { { PI_2 ZERO 32 } } } } \
+  -post_assign { PO_0 = { SUBGRAPH_201.out.1 ANY 32 } } 
+
+## Operation Id: 188
+guide_boundary \
+  -body { DP_OP_249_24682_65499_J3_H25_D0 } \
+  -operand { PI_0 bin 32 } \
+  -column { PI_0 0 { PI_0[0] } } \
+  -column { PI_0 1 { PI_0[1] } } \
+  -column { PI_0 2 { PI_0[2] } } \
+  -column { PI_0 3 { PI_0[3] } } \
+  -column { PI_0 4 { PI_0[4] } } \
+  -column { PI_0 5 { PI_0[5] } } \
+  -column { PI_0 6 { PI_0[6] } } \
+  -column { PI_0 7 { PI_0[7] } } \
+  -column { PI_0 8 { PI_0[8] } } \
+  -column { PI_0 9 { PI_0[9] } } \
+  -column { PI_0 10 { PI_0[10] } } \
+  -column { PI_0 11 { PI_0[11] } } \
+  -column { PI_0 12 { PI_0[12] } } \
+  -column { PI_0 13 { PI_0[13] } } \
+  -column { PI_0 14 { PI_0[14] } } \
+  -column { PI_0 15 { PI_0[15] } } \
+  -column { PI_0 16 { PI_0[16] } } \
+  -column { PI_0 17 { PI_0[17] } } \
+  -column { PI_0 18 { PI_0[18] } } \
+  -column { PI_0 19 { PI_0[19] } } \
+  -column { PI_0 20 { PI_0[20] } } \
+  -column { PI_0 21 { PI_0[21] } } \
+  -column { PI_0 22 { PI_0[22] } } \
+  -column { PI_0 23 { PI_0[23] } } \
+  -column { PI_0 24 { PI_0[24] } } \
+  -column { PI_0 25 { PI_0[25] } } \
+  -column { PI_0 26 { PI_0[26] } } \
+  -column { PI_0 27 { PI_0[27] } } \
+  -column { PI_0 28 { PI_0[28] } } \
+  -column { PI_0 29 { PI_0[29] } } \
+  -column { PI_0 30 { PI_0[30] } } \
+  -column { PI_0 31 { PI_0[31] } } \
+  -operand { PI_1 bin 32 } \
+  -column { PI_1 0 { PI_1[0] } } \
+  -column { PI_1 1 { PI_1[1] } } \
+  -column { PI_1 2 { PI_1[2] } } \
+  -column { PI_1 3 { PI_1[3] } } \
+  -column { PI_1 4 { PI_1[4] } } \
+  -column { PI_1 5 { PI_1[5] } } \
+  -column { PI_1 6 { PI_1[6] } } \
+  -column { PI_1 7 { PI_1[7] } } \
+  -column { PI_1 8 { PI_1[8] } } \
+  -column { PI_1 9 { PI_1[9] } } \
+  -column { PI_1 10 { PI_1[10] } } \
+  -column { PI_1 11 { PI_1[11] } } \
+  -column { PI_1 12 { PI_1[12] } } \
+  -column { PI_1 13 { PI_1[13] } } \
+  -column { PI_1 14 { PI_1[14] } } \
+  -column { PI_1 15 { PI_1[15] } } \
+  -column { PI_1 16 { PI_1[16] } } \
+  -column { PI_1 17 { PI_1[17] } } \
+  -column { PI_1 18 { PI_1[18] } } \
+  -column { PI_1 19 { PI_1[19] } } \
+  -column { PI_1 20 { PI_1[20] } } \
+  -column { PI_1 21 { PI_1[21] } } \
+  -column { PI_1 22 { PI_1[22] } } \
+  -column { PI_1 23 { PI_1[23] } } \
+  -column { PI_1 24 { PI_1[24] } } \
+  -column { PI_1 25 { PI_1[25] } } \
+  -column { PI_1 26 { PI_1[26] } } \
+  -column { PI_1 27 { PI_1[27] } } \
+  -column { PI_1 28 { PI_1[28] } } \
+  -column { PI_1 29 { PI_1[29] } } \
+  -column { PI_1 30 { PI_1[30] } } \
+  -column { PI_1 31 { PI_1[31] } } \
+  -operand { PI_2 bin 1 } \
+  -column { PI_2 0 { PI_2 } } \
+  -operand { SUBGRAPH_201.out.1 bin 32 } \
+  -column { SUBGRAPH_201.out.1 0 { PO_0[0] } } \
+  -column { SUBGRAPH_201.out.1 1 { PO_0[1] } } \
+  -column { SUBGRAPH_201.out.1 2 { PO_0[2] } } \
+  -column { SUBGRAPH_201.out.1 3 { PO_0[3] } } \
+  -column { SUBGRAPH_201.out.1 4 { PO_0[4] } } \
+  -column { SUBGRAPH_201.out.1 5 { PO_0[5] } } \
+  -column { SUBGRAPH_201.out.1 6 { PO_0[6] } } \
+  -column { SUBGRAPH_201.out.1 7 { PO_0[7] } } \
+  -column { SUBGRAPH_201.out.1 8 { PO_0[8] } } \
+  -column { SUBGRAPH_201.out.1 9 { PO_0[9] } } \
+  -column { SUBGRAPH_201.out.1 10 { PO_0[10] } } \
+  -column { SUBGRAPH_201.out.1 11 { PO_0[11] } } \
+  -column { SUBGRAPH_201.out.1 12 { PO_0[12] } } \
+  -column { SUBGRAPH_201.out.1 13 { PO_0[13] } } \
+  -column { SUBGRAPH_201.out.1 14 { PO_0[14] } } \
+  -column { SUBGRAPH_201.out.1 15 { PO_0[15] } } \
+  -column { SUBGRAPH_201.out.1 16 { PO_0[16] } } \
+  -column { SUBGRAPH_201.out.1 17 { PO_0[17] } } \
+  -column { SUBGRAPH_201.out.1 18 { PO_0[18] } } \
+  -column { SUBGRAPH_201.out.1 19 { PO_0[19] } } \
+  -column { SUBGRAPH_201.out.1 20 { PO_0[20] } } \
+  -column { SUBGRAPH_201.out.1 21 { PO_0[21] } } \
+  -column { SUBGRAPH_201.out.1 22 { PO_0[22] } } \
+  -column { SUBGRAPH_201.out.1 23 { PO_0[23] } } \
+  -column { SUBGRAPH_201.out.1 24 { PO_0[24] } } \
+  -column { SUBGRAPH_201.out.1 25 { PO_0[25] } } \
+  -column { SUBGRAPH_201.out.1 26 { PO_0[26] } } \
+  -column { SUBGRAPH_201.out.1 27 { PO_0[27] } } \
+  -column { SUBGRAPH_201.out.1 28 { PO_0[28] } } \
+  -column { SUBGRAPH_201.out.1 29 { PO_0[29] } } \
+  -column { SUBGRAPH_201.out.1 30 { PO_0[30] } } \
+  -column { SUBGRAPH_201.out.1 31 { PO_0[31] } } \
+  -resource { SUBGRAPH_201 \
+     { PI_0 PI_1 PI_2 } \
+     { SUBGRAPH_201.out.1 } } 
+
+## Operation Id: 189
+guide_datapath \
+  -design { PE } \
+  -datapath { DP_OP_249_24682_65499_J1 } \
+  -body { DP_OP_249_24682_65499_J3_H25_D0 } 
+
+## Operation Id: 190
+guide_environment \
+  { { clock_gating latch_and } \
+    { clock_gating latch_or } } 
+
+## Operation Id: 191
+guide_environment \
+  { { postcompile_db_list { /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ssg0p81v125c_ccs.db  } } } 
+
+## Operation Id: 192
+guide_environment \
+  { { postcompile_db_list { /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ssg0p81v125c_ccs.db  } } } 
+
+## Operation Id: 193
+guide_environment \
+  { { postcompile_db_list { /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ssg0p81v125c_ccs.db  } } } 
+
+## Operation Id: 194
+guide_environment \
+  { { postcompile_db_list { /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ssg0p81v125c_ccs.db  } } } 
+
+## Operation Id: 195
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { RS_OP_250_54632_65499_J1 } \
+  -input { 16 source0 } \
+  -input { 16 source1 } \
+  -input { 17 source2 } \
+  -output { 18 O0 } \
+  -pre_resource { { 17 } snps_ADD_253 = ADD { { source0 SIGN 17 } { source1 SIGN 17 } } } \
+  -pre_resource { { 18 } snps_ADD_254 = ADD { { source2 SIGN 18 } { snps_ADD_253.out.1 SIGN 18 } } } \
+  -pre_assign { O0 = { snps_ADD_254.out.1 ANY 18 } } \
+  -post_resource { { 18 } snps_ADD_255 = MADD { { source0 SIGN 18 } { source1 SIGN 18 } { source2 SIGN 18 } } } \
+  -post_assign { O0 = { snps_ADD_255.out.1 ANY 18 } } 
+
+## Operation Id: 196
+guide_replace \
+  -origin { ExTra_MOP_COMPOSE } \
+  -design { RS_OP_250_54632_65499_J1 } \
+  -input { 16 source0 } \
+  -input { 16 source1 } \
+  -input { 16 source2 } \
+  -input { 16 source3 } \
+  -output { 18 O0 } \
+  -pre_resource { { 17 } snps_ADD_251 = ADD { { source0 SIGN 17 } { source1 SIGN 17 } } } \
+  -pre_resource { { 18 } snps_ADD_255 = MADD { { source2 SIGN 18 } { source3 SIGN 18 } { snps_ADD_251.out.1 SIGN 18 } } } \
+  -pre_assign { O0 = { snps_ADD_255.out.1 ANY 18 } } \
+  -post_resource { { 18 } snps_ADD_256 = MADD { { source0 SIGN 18 } { source1 SIGN 18 } { source2 SIGN 18 } { source3 SIGN 18 } } } \
+  -post_assign { O0 = { snps_ADD_256.out.1 ANY 18 } } 
+
+## Operation Id: 197
+guide_merge \
+  -design { RS_OP_250_54632_65499_J1 } \
+  -datapath { DP_OP_257_41740_28757_J0 } \
+  -type { svfMergeDPOP } \
+  -input { 16 PI_0 } \
+  -input { 16 PI_1 } \
+  -input { 16 PI_2 } \
+  -input { 16 PI_3 } \
+  -output { 18 PO_0 } \
+  -pre_resource { { 18 } snps_ADD_256 = MADD { { PI_0 SIGN 18 } { PI_1 SIGN 18 } { PI_2 SIGN 18 } { PI_3 SIGN 18 } } } \
+  -pre_assign { PO_0 = { snps_ADD_256.out.1 ANY 18 } } 
+
+## Operation Id: 198
+guide_constant \
+  -design { RS_OP_250_54632_65499_J1 } \
+  -verify_scope { PE } \
+  -type { svfConstantTypeSource } \
+  -constant0 { svfObjectPort PI_1[15] } \
+  -constant0 { svfObjectPort PI_1[14] } \
+  -constant0 { svfObjectPort PI_1[13] } \
+  -constant0 { svfObjectPort PI_1[12] } \
+  -constant0 { svfObjectPort PI_1[11] } 
+
+## Operation Id: 199
+guide_boundary_netlist \
+  -file { d1/netlists/dw-1/DP_OP_257_41740_28757_J18_r18_H0_D0.b.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 200
+guide_architecture_netlist \
+  -file { d1/netlists/dw-1/DP_OP_257_41740_28757_J18_r18_H0_D0.b.v } \
+  { tcbn28hpcplusbwp30p140 tcbn28hpcplusbwp30p140hvt tcbn28hpcplusbwp30p140lvt } 
+
+## Operation Id: 201
+guide_replace \
+  -origin { Gensh } \
+  -body { DP_OP_257_41740_28757_J18_r18_H0_D0 } \
+  -input { 16 PI_0 } \
+  -input { 16 PI_1 } \
+  -input { 16 PI_2 } \
+  -input { 16 PI_3 } \
+  -output { 18 PO_0 } \
+  -pre_resource { { 18 } ADD_256 = MADD { { PI_0 SIGN 18 } { PI_1 SIGN 18 } { PI_2 SIGN 18 } { PI_3 SIGN 18 } } } \
+  -pre_assign { PO_0 = { ADD_256.out.1 ANY 18 } } \
+  -post_resource { { 18 } SUBGRAPH_258 = SOP { { { PI_0 SIGN 18 } } { { PI_1 SIGN 18 } } { { PI_2 SIGN 18 } } { { PI_3 SIGN 18 } } } } \
+  -post_assign { PO_0 = { SUBGRAPH_258.out.1 ANY 18 } } 
+
+## Operation Id: 202
+guide_boundary \
+  -body { DP_OP_257_41740_28757_J18_r18_H0_D0 } \
+  -operand { PI_0 bin 16 } \
+  -column { PI_0 0 { PI_0[0] } } \
+  -column { PI_0 1 { PI_0[1] } } \
+  -column { PI_0 2 { PI_0[2] } } \
+  -column { PI_0 3 { PI_0[3] } } \
+  -column { PI_0 4 { PI_0[4] } } \
+  -column { PI_0 5 { PI_0[5] } } \
+  -column { PI_0 6 { PI_0[6] } } \
+  -column { PI_0 7 { PI_0[7] } } \
+  -column { PI_0 8 { PI_0[8] } } \
+  -column { PI_0 9 { PI_0[9] } } \
+  -column { PI_0 10 { PI_0[10] } } \
+  -column { PI_0 11 { PI_0[11] } } \
+  -column { PI_0 12 { PI_0[12] } } \
+  -column { PI_0 13 { PI_0[13] } } \
+  -column { PI_0 14 { PI_0[14] } } \
+  -column { PI_0 15 { PI_0[15] } } \
+  -operand { PI_1 bin 16 } \
+  -column { PI_1 0 { PI_1[0] } } \
+  -column { PI_1 1 { PI_1[1] } } \
+  -column { PI_1 2 { PI_1[2] } } \
+  -column { PI_1 3 { PI_1[3] } } \
+  -column { PI_1 4 { PI_1[4] } } \
+  -column { PI_1 5 { PI_1[5] } } \
+  -column { PI_1 6 { PI_1[6] } } \
+  -column { PI_1 7 { PI_1[7] } } \
+  -column { PI_1 8 { PI_1[8] } } \
+  -column { PI_1 9 { PI_1[9] } } \
+  -column { PI_1 10 { PI_1[10] } } \
+  -column { PI_1 11 { PI_1[11] } } \
+  -column { PI_1 12 { PI_1[12] } } \
+  -column { PI_1 13 { PI_1[13] } } \
+  -column { PI_1 14 { PI_1[14] } } \
+  -column { PI_1 15 { PI_1[15] } } \
+  -operand { PI_2 bin 16 } \
+  -column { PI_2 0 { PI_2[0] } } \
+  -column { PI_2 1 { PI_2[1] } } \
+  -column { PI_2 2 { PI_2[2] } } \
+  -column { PI_2 3 { PI_2[3] } } \
+  -column { PI_2 4 { PI_2[4] } } \
+  -column { PI_2 5 { PI_2[5] } } \
+  -column { PI_2 6 { PI_2[6] } } \
+  -column { PI_2 7 { PI_2[7] } } \
+  -column { PI_2 8 { PI_2[8] } } \
+  -column { PI_2 9 { PI_2[9] } } \
+  -column { PI_2 10 { PI_2[10] } } \
+  -column { PI_2 11 { PI_2[11] } } \
+  -column { PI_2 12 { PI_2[12] } } \
+  -column { PI_2 13 { PI_2[13] } } \
+  -column { PI_2 14 { PI_2[14] } } \
+  -column { PI_2 15 { PI_2[15] } } \
+  -operand { PI_3 bin 16 } \
+  -column { PI_3 0 { PI_3[0] } } \
+  -column { PI_3 1 { PI_3[1] } } \
+  -column { PI_3 2 { PI_3[2] } } \
+  -column { PI_3 3 { PI_3[3] } } \
+  -column { PI_3 4 { PI_3[4] } } \
+  -column { PI_3 5 { PI_3[5] } } \
+  -column { PI_3 6 { PI_3[6] } } \
+  -column { PI_3 7 { PI_3[7] } } \
+  -column { PI_3 8 { PI_3[8] } } \
+  -column { PI_3 9 { PI_3[9] } } \
+  -column { PI_3 10 { PI_3[10] } } \
+  -column { PI_3 11 { PI_3[11] } } \
+  -column { PI_3 12 { PI_3[12] } } \
+  -column { PI_3 13 { PI_3[13] } } \
+  -column { PI_3 14 { PI_3[14] } } \
+  -column { PI_3 15 { PI_3[15] } } \
+  -operand { SUBGRAPH_258.out.1 bin 18 } \
+  -column { SUBGRAPH_258.out.1 0 { PO_0[0] } } \
+  -column { SUBGRAPH_258.out.1 1 { PO_0[1] } } \
+  -column { SUBGRAPH_258.out.1 2 { PO_0[2] } } \
+  -column { SUBGRAPH_258.out.1 3 { PO_0[3] } } \
+  -column { SUBGRAPH_258.out.1 4 { PO_0[4] } } \
+  -column { SUBGRAPH_258.out.1 5 { PO_0[5] } } \
+  -column { SUBGRAPH_258.out.1 6 { PO_0[6] } } \
+  -column { SUBGRAPH_258.out.1 7 { PO_0[7] } } \
+  -column { SUBGRAPH_258.out.1 8 { PO_0[8] } } \
+  -column { SUBGRAPH_258.out.1 9 { PO_0[9] } } \
+  -column { SUBGRAPH_258.out.1 10 { PO_0[10] } } \
+  -column { SUBGRAPH_258.out.1 11 { PO_0[11] } } \
+  -column { SUBGRAPH_258.out.1 12 { PO_0[12] } } \
+  -column { SUBGRAPH_258.out.1 13 { PO_0[13] } } \
+  -column { SUBGRAPH_258.out.1 14 { PO_0[14] } } \
+  -column { SUBGRAPH_258.out.1 15 { PO_0[15] } } \
+  -column { SUBGRAPH_258.out.1 16 { PO_0[16] } } \
+  -column { SUBGRAPH_258.out.1 17 { PO_0[17] } } \
+  -resource { SUBGRAPH_258 \
+     { PI_0 PI_1 PI_2 PI_3 } \
+     { SUBGRAPH_258.out.1 } } 
+
+## Operation Id: 203
+guide_datapath \
+  -design { RS_OP_250_54632_65499_J1 } \
+  -datapath { DP_OP_257_41740_28757_J0 } \
+  -body { DP_OP_257_41740_28757_J18_r18_H0_D0 } 
+
+## Operation Id: 204
+guide_ungroup \
+  -cells { RS_OP_250_54632_65499_J1 } \
+  -design { PE } 
+
+## Operation Id: 205
+guide_ungroup \
+  -cells { u_mac_and_scale/add_188 } \
+  -design { PE } 
+
+## Operation Id: 206
+guide_ungroup \
+  -cells { DP_OP_244_18871_65499_J1 } \
+  -design { PE } 
+
+## Operation Id: 207
+guide_ungroup \
+  -cells { DP_OP_245_33587_65499_J1 } \
+  -design { PE } 
+
+## Operation Id: 208
+guide_ungroup \
+  -cells { DP_OP_246_35163_65499_J1 } \
+  -design { PE } 
+
+## Operation Id: 209
+guide_ungroup \
+  -cells { DP_OP_247_35163_65499_J1 } \
+  -design { PE } 
+
+## Operation Id: 210
+guide_ungroup \
+  -cells { DP_OP_248_26668_65499_J1 } \
+  -design { PE } 
+
+## Operation Id: 211
+guide_ungroup \
+  -cells { DP_OP_249_24682_65499_J1 } \
+  -design { PE } 
+
+## Operation Id: 212
+guide_ungroup \
+  -cells { RS_OP_250_54632_65499_J1/DP_OP_257_41740_28757_J0 } \
+  -design { PE } 
+
+## Operation Id: 213
+guide_environment \
+  { { postcompile_db_list { /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ssg0p81v125c_ccs.db  } } } 
+
+## Operation Id: 214
+guide_environment \
+  { { postcompile_db_list { /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ssg0p81v125c_ccs.db  } } } 
+
+## Operation Id: 215
+guide_environment \
+  { { postcompile_db_list { /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ssg0p81v125c_ccs.db  } } } 
+
+## Operation Id: 216
+guide_environment \
+  { { postcompile_db_list { /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ssg0p81v125c_ccs.db  } } } 
+
+## Operation Id: 217
+guide_environment \
+  { { postcompile_db_list { /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ssg0p81v125c_ccs.db  } } } 
+
+## Operation Id: 218
+guide_environment \
+  { { postcompile_db_list { /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ssg0p81v125c_ccs.db  } } } 
+
+## Operation Id: 219
+guide_environment \
+  { { postcompile_db_list { /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ssg0p81v125c_ccs.db  } } } 
+
+## Operation Id: 220
+guide_environment \
+  { { postcompile_db_list { /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ssg0p81v125c_ccs.db  } } } 
+
+## Operation Id: 221
+guide_environment \
+  { { postcompile_db_list { /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ssg0p81v125c_ccs.db  } } } 
+
+## Operation Id: 222
+guide_environment \
+  { { postcompile_db_list { /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ssg0p81v125c_ccs.db  } } } 
+
+## Operation Id: 223
+guide_environment \
+  { { postcompile_db_list { /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ssg0p81v125c_ccs.db  } } } 
+
+## Operation Id: 224
+guide_environment \
+  { { postcompile_db_list { /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ssg0p81v125c_ccs.db  } } } 
+
+## Operation Id: 225
+guide_environment \
+  { { postcompile_db_list { /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ssg0p81v125c_ccs.db  } } } 
+
+## Operation Id: 226
+guide_environment \
+  { { postcompile_db_list { /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtssg0p81v125c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140lvt_180a/tcbn28hpcplusbwp30p140lvttt0p9v85c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140hvt_180a/tcbn28hpcplusbwp30p140hvtffg0p99v0c_ccs.db /data/tsmc/28HPCPLUS/dig_libs/TSMCHOME/digital/Front_End/timing_power_noise/CCS/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140ssg0p81v125c_ccs.db  } } } 
+
+## Operation Id: 227
+guide_environment \
+  { { save_block { -block PE/Place /project/tsmc28mmwave/users/itaischuster/ws/PE_BE/PE.dlib } } } 
+
+## Operation Id: 228
+guide_breakpoint \
+  -type { final_opto } \
+  -cksum { 569d13e2-3c10-461e-8951-3dffee689d87 } 
+
+## Operation Id: 229
+guide_environment \
+  { { save_block { -block PE /project/tsmc28mmwave/users/itaischuster/ws/PE_BE/PE.dlib } } } 
+
+## Operation Id: 230
+guide_breakpoint \
+  -type { final_opto } \
+  -cksum { b71704db-a8bb-4c0c-83d9-3ee19fc6735f } 
+
+## Operation Id: 231
+guide_environment \
+  { { write_verilog netlist/PE_verilog.v } } 
+
+## Operation Id: 232
+guide_breakpoint \
+  -type { final_opto } \
+  -cksum { v1:Verilog:R:0aafbd58-803f-5aab-9aaa-e05c765a1222 } 
+
+setup
+
